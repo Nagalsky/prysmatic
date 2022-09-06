@@ -46,6 +46,9 @@ module.exports = {
         'gradient-via': '#252a2b',
         'gradient-end': '#484b4b',
       },
+      backgroundImage: {
+        'footer-gradient': 'linear-gradient(113deg, #825aff 1%, #483681 92%)',
+      },
     },
   },
   plugins: [],

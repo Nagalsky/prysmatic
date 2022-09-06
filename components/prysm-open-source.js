@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import banner from '../assets/images/open-source-banner.png'
 
 export default function PrysmOpenSource({ ...restProps }) {
   return (
@@ -13,9 +15,22 @@ export default function PrysmOpenSource({ ...restProps }) {
           Globally
           <span className="xl:block">Accessible</span>
         </h2>
-        <h3 className="font-lead text-[20px] sm:text-[26px] md:text-[30px] lg:text-[40px] mx-auto max-w-[920px] leading-[1.25]">
+        <h3 className="font-lead text-[20px] sm:text-[26px] md:text-[30px] lg:text-[40px] mx-auto max-w-[920px] leading-[1.25] mb-[40px] md:mb-16">
           Prysm empowers developers to build a fairer financial world
         </h3>
+
+        <div className="mb-[20px] max-w-[754px] mx-auto">
+          <Image
+            src={banner}
+            alt="banner"
+            title="banner"
+            width="100%"
+            height="100%"
+            layout="responsive"
+            objectFit="contain"
+            priority={10}
+          />
+        </div>
       </div>
     </section>
   )

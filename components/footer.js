@@ -5,7 +5,7 @@ export default function Footer({ ...restProps }) {
   return (
     <footer
       {...restProps}
-      className="bg-gradient-to-b from-[#825aff] to-[#483681] text-semi-white py-[20px] md:py-8"
+      className="bg-footer-gradient text-semi-white py-[20px] md:py-8"
     >
       <div className="container">
         <div className="grid md:grid-cols-[200px_1fr] xxl:grid-cols-2 gap-9 xxl:gap-0">
