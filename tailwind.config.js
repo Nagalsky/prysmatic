@@ -42,11 +42,10 @@ module.exports = {
         'yellow-600': '#d2b343',
         'sky-500': '#75a8ff',
         'rose-500': '#e35484',
-        'gradient-start': '#1b2022',
-        'gradient-via': '#252a2b',
-        'gradient-end': '#484b4b',
       },
       backgroundImage: {
+        'body-gradient':
+          'linear-gradient(to top, #484b4b 0%, #252a2b 53%, #1b2022 100%)',
         'footer-gradient': 'linear-gradient(113deg, #825aff 1%, #483681 92%)',
       },
     },

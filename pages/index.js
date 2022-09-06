@@ -4,13 +4,7 @@ import PrysmHero from '../components/prysm-hero'
 import PrysmOpenSource from '../components/prysm-open-source'
 
 export default function Home() {
-  const bodyClasses = [
-    'bg-gradient-to-b',
-    'from-gradient-start',
-    'via-gradient-via',
-    'to-gradient-via',
-    'text-semi-white',
-  ]
+  const bodyClasses = ['bg-body-gradient', 'text-semi-white']
   useEffect(() => {
     document.body.classList.add(...bodyClasses)
   })
