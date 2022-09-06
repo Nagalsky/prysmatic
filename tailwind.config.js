@@ -33,8 +33,11 @@ module.exports = {
     extend: {
       colors: {
         'semi-white': '#eee8e1',
+        'dark-500': '#1b2022',
         'purple-500': '#825AFF',
         'purple-600': '#6540da',
+        'yellow-500': '#edc94a',
+        'yellow-600': '#d2b343',
       },
     },
   },
