@@ -38,6 +38,7 @@ module.exports = {
         'purple-600': '#6540da',
         'yellow-500': '#edc94a',
         'yellow-600': '#d2b343',
+        'sky-500': '#75a8ff',
         'gradient-start': '#1b2022',
         'gradient-via': '#252a2b',
         'gradient-end': '#484b4b',

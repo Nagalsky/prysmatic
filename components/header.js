@@ -265,7 +265,7 @@ export default function Header({ ...restProps }) {
 
           <button
             type="button"
-            className="inline-flex items-center gap-4 border-2 border-yellow-500 rounded-[10px] text-yellow-500 transition py-[4px] px-[20px] hover:text-white hover:bg-yellow-500 mx-auto lg:mx-0"
+            className="inline-flex items-center gap-4 border-2 border-yellow-500 rounded-[10px] text-yellow-500 transition py-[4px] px-[20px] hover:text-dark-500 hover:bg-yellow-500 mx-auto lg:mx-0 font-heading"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
