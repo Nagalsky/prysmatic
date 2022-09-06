@@ -1,19 +1,42 @@
 /** @type {import('tailwindcss').Config} */
+
+const bodyFontFamily = '"Inter-Regular", sans-serif'
+const headingFontFamily = '"Sora-SemiBold", sans-serif'
+const subHeadingFontFamily = '"DM-Mono-Regular", sans-serif'
+
 module.exports = {
-  mode: "jit",
+  mode: 'jit',
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: "class",
+  darkMode: 'class',
   theme: {
+    fontFamily: {
+      sans: bodyFontFamily,
+      heading: headingFontFamily,
+      subheading: subHeadingFontFamily,
+    },
     container: {
       center: true,
       padding: {
-        DEFAULT: "15px",
+        DEFAULT: '15px',
       },
     },
-    extend: {},
+    screens: {
+      sm: '540px',
+      md: '768px',
+      lg: '910px',
+      xl: '1199px',
+      xxl: '1400px',
+    },
+    extend: {
+      colors: {
+        'semi-white': '#eee8e1',
+        'purple-500': '#825AFF',
+        'purple-600': '#6540da',
+      },
+    },
   },
   plugins: [],
-};
+}
