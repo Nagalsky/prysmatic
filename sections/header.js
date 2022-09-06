@@ -15,8 +15,6 @@ export default function Header({ ...restProps }) {
     setMounted(true)
   }, [])
 
-  console.log('theme', theme)
-
   const renderThemeChanger = () => {
     if (!mounted) return null
 
