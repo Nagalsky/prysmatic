@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import banner from '../assets/images/index-hero-banners.png'
 
-export default function IndexHero({ ...restProps }) {
+export default function PrysmHero({ ...restProps }) {
   return (
     <section
       className="pt-[20px] pb-[52px] sm:pt-[40px] md:pt-[60px] lg:pt-[120px] xl:pt-[200px] md:pb-[60px] lg:pb-[110px] relative text-center md:text-start"
@@ -27,7 +27,7 @@ export default function IndexHero({ ...restProps }) {
           <h1 className="font-heading text-[40px] sm:text-[50px] lg:text-[65px] xl:text-[70px] mb-[20px] md:mb-[40px] leading-none">
             Prysm
           </h1>
-          <h2 className="font-heading text-[30px] sm:text-[26px] lg:text-[40px] xl:text-[48px] leading-[1.6] md:leading-[1.4]  mb-[20px] md:mb-[40px]">
+          <h2 className="font-heading text-[30px] sm:text-[26px] lg:text-[40px] xl:text-[48px] leading-[1.6] md:leading-[1.4] mb-[20px] md:mb-[40px]">
             Run NODE
             <span className="inline-block bg-semi-white align-super w-[50px] lg:w-[90px] h-[7px] ml-2 relative top-[2px] md:top-0"></span>
             <span className="block">
@@ -37,7 +37,7 @@ export default function IndexHero({ ...restProps }) {
               </span>
             </span>
           </h2>
-          <p className="md:text-[20px] lg:text-[25px] mb-[40px] leading-[1.4]">
+          <p className="md:text-[20px] lg:text-[25px] mb-[40px] leading-[1.4] tracking-[0.5px]">
             Use Prysm to easily and sustainably run nodes on the Ethereum
             blockchain
           </p>

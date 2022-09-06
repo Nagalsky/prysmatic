@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Head from 'next/head'
-import IndexHero from '../components/index-hero'
+import PrysmHero from '../components/prysm-hero'
+import PrysmOpenSource from '../components/prysm-open-source'
 
 export default function Home() {
   const bodyClasses = [
@@ -22,7 +23,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <IndexHero />
+      <PrysmHero />
+
+      <PrysmOpenSource />
     </>
   )
 }
