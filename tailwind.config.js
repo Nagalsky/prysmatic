@@ -2,6 +2,7 @@
 
 const bodyFontFamily = '"Inter-Regular", sans-serif'
 const headingFontFamily = '"Sora-SemiBold", sans-serif'
+const leadFontFamily = '"Sora-Regular", sans-serif'
 const subHeadingFontFamily = '"DM-Mono-Regular", sans-serif'
 
 module.exports = {
@@ -16,6 +17,7 @@ module.exports = {
       sans: bodyFontFamily,
       heading: headingFontFamily,
       subheading: subHeadingFontFamily,
+      lead: leadFontFamily,
     },
     container: {
       center: true,
