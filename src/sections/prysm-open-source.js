@@ -75,8 +75,8 @@ export default function PrysmOpenSource({ ...restProps }) {
               />
             </div>
             <p className="sm:text-[20px] md:text-[25px] leading-[1.3]">
-              Leverage Prysm's incredible user experience to run nodes on the
-              Ethereum network from anywhere in the world
+              Leverage Prysm&#39;s incredible user experience to run nodes on
+              the Ethereum network from anywhere in the world
             </p>
           </div>
         </div>
