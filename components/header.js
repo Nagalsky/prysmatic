@@ -154,11 +154,12 @@ export default function Header({ ...restProps }) {
         <div
           className={`${
             isOpened ? 'flex' : 'hidden'
-          } grow flex-col items-start lg:flex lg:flex-row lg:items-center lg:justify-between absolute lg:static top-full bg-gradient-to-b from-[#1b2022] via-[#252a2b] to-[#484b4b] lg:bg-none w-full lg:w-auto z-10 left-0 p-[20px] lg:p-0 gap-[20px] lg:gap-4 max-h-[calc(100vh_-_72px)] overflow-auto shadow-[0_4px_4px_0_rgba(0,0,0,0.25)_inset] lg:shadow-none`}
+          } grow flex-col items-start lg:flex lg:flex-row lg:items-center lg:justify-between absolute lg:static top-full bg-gradient-to-b from-gradient-start via-gradient-via to-gradient-end lg:bg-none w-full lg:w-auto z-10 left-0 p-[20px] lg:p-0 gap-[20px] lg:gap-4 max-h-[calc(100vh_-_72px)] overflow-auto shadow-[0_4px_4px_0_rgba(0,0,0,0.25)_inset] lg:shadow-none`}
         >
           <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 lg:gap-8 xl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center">
             <Link href="/">
               <a
+                onClick={() => setIsOpened(false)}
                 className={`${
                   router.asPath === '/'
                     ? 'lg:border-b-semi-white lg:border-b'
@@ -184,6 +185,7 @@ export default function Header({ ...restProps }) {
             </Link>
             <Link href="/about">
               <a
+                onClick={() => setIsOpened(false)}
                 className={`${
                   router.asPath === '/about'
                     ? 'lg:border-b-semi-white lg:border-b'
@@ -209,6 +211,7 @@ export default function Header({ ...restProps }) {
             </Link>
             <Link href="/careers">
               <a
+                onClick={() => setIsOpened(false)}
                 className={`${
                   router.asPath === '/careers'
                     ? 'lg:border-b-semi-white lg:border-b'
@@ -234,6 +237,7 @@ export default function Header({ ...restProps }) {
             </Link>
             <Link href="/docs">
               <a
+                onClick={() => setIsOpened(false)}
                 className={`${
                   router.asPath === '/docs'
                     ? 'lg:border-b-semi-white lg:border-b'

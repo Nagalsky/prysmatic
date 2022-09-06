@@ -1,6 +1,19 @@
+import { useEffect } from 'react'
 import Head from 'next/head'
+import IndexHero from '../components/index-hero'
 
 export default function Home() {
+  const bodyClasses = [
+    'bg-gradient-to-b',
+    'from-gradient-start',
+    'via-gradient-via',
+    'to-gradient-via',
+    'text-semi-white',
+  ]
+  useEffect(() => {
+    document.body.classList.add(...bodyClasses)
+  })
+
   return (
     <>
       <Head>
@@ -10,7 +23,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Welcome to landing page</h1>
+        <IndexHero />
       </main>
     </>
   )
