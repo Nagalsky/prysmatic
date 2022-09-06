@@ -18,7 +18,8 @@ export default function PrysmHero({ ...restProps }) {
           height="100%"
           layout="responsive"
           objectFit="cover"
-          priority={10}
+          priority={true}
+          placeholder="blur"
         />
       </div>
 

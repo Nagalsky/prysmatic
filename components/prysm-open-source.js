@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import banner from '../assets/images/open-source-banner.png'
+import bannerMobile from '../assets/images/open-source-banner-mobile.png'
 
 export default function PrysmOpenSource({ ...restProps }) {
   return (
@@ -19,13 +20,25 @@ export default function PrysmOpenSource({ ...restProps }) {
           Prysm empowers developers to build a fairer financial world
         </h3>
 
-        <div className="mb-[20px] max-w-[754px] mx-auto">
+        <div className="mb-[105px] max-w-[754px] mx-auto hidden md:block">
           <Image
             src={banner}
             alt="banner"
             title="banner"
             layout="responsive"
-            priority={10}
+            priority={true}
+            placeholder="blur"
+          />
+        </div>
+
+        <div className="mb-[60px] md:hidden">
+          <Image
+            src={bannerMobile}
+            alt="banner"
+            title="banner"
+            layout="responsive"
+            priority={true}
+            placeholder="blur"
           />
         </div>
       </div>
