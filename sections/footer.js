@@ -4,8 +4,8 @@ import Link from 'next/link'
 export default function Footer({ ...restProps }) {
   return (
     <footer
+      className="bg-footer-gradient text-semi-white py-[20px] md:py-8 shrink-0"
       {...restProps}
-      className="bg-footer-gradient text-semi-white py-[20px] md:py-8"
     >
       <div className="container">
         <div className="grid md:grid-cols-[200px_1fr] xxl:grid-cols-2 gap-9 xxl:gap-0">

@@ -1,15 +1,69 @@
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useTheme } from 'next-themes'
 
 export default function Header({ ...restProps }) {
   const router = useRouter()
 
   const [isOpened, setIsOpened] = useState(false)
 
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  console.log('theme', theme)
+
+  const renderThemeChanger = () => {
+    if (!mounted) return null
+
+    if (theme === 'dark') {
+      return (
+        <button role="button" onClick={() => setTheme('light')}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 cursor-pointer"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+            />
+          </svg>
+        </button>
+      )
+    } else {
+      return (
+        <button role="button" onClick={() => setTheme('dark')}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 cursor-pointer"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+            />
+          </svg>
+        </button>
+      )
+    }
+  }
+
   return (
     <header
-      className="bg-dark-500 text-semi-white text-base font-heading shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] py-[20px] lg:py-[26px] relative"
+      className="bg-dark-500 text-semi-white text-base font-heading shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] py-[20px] lg:py-[26px] relative shrink-0"
       {...restProps}
     >
       <div className="container flex items-center gap-4 lg:gap-16 xxl:gap-[268px]">
@@ -151,12 +205,14 @@ export default function Header({ ...restProps }) {
           )}
         </button>
 
+        <div class="flex lg:hidden ml-6">{renderThemeChanger()}</div>
+
         <div
           className={`${
             isOpened ? 'flex' : 'hidden'
-          } grow flex-col items-start lg:flex lg:flex-row lg:items-center lg:justify-between absolute lg:static top-full bg-body-gradient lg:bg-none w-full lg:w-auto z-[50] left-0 p-[20px] lg:p-0 gap-[20px] lg:gap-4 max-h-[calc(100vh_-_72px)] overflow-auto shadow-[0_4px_4px_0_rgba(0,0,0,0.25)_inset] lg:shadow-none`}
+          } grow flex-col items-start lg:flex lg:flex-row lg:items-center lg:justify-end absolute lg:static top-full bg-body-gradient lg:bg-none w-full lg:w-auto z-[50] left-0 p-[20px] lg:p-0 max-h-[calc(100vh_-_72px)] overflow-auto shadow-[0_4px_4px_0_rgba(0,0,0,0.25)_inset] lg:shadow-none`}
         >
-          <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 lg:gap-8 xl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center">
+          <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 lg:gap-8 xl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center grow">
             <Link href="/">
               <a
                 onClick={() => setIsOpened(false)}
@@ -265,7 +321,7 @@ export default function Header({ ...restProps }) {
 
           <button
             type="button"
-            className="inline-flex items-center gap-4 border-2 border-yellow-500 rounded-[10px] text-yellow-500 transition py-[4px] px-[20px] hover:text-dark-500 hover:bg-yellow-500 mx-auto lg:mx-0 font-heading"
+            className="inline-flex items-center gap-4 border-2 border-yellow-500 rounded-[10px] text-yellow-500 transition py-[4px] px-[20px] hover:text-dark-500 hover:bg-yellow-500 mx-auto lg:mx-0 font-heading mt-[20px] lg:mt-0 lg:ml-4"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -283,6 +339,8 @@ export default function Header({ ...restProps }) {
             </svg>
             Install Prysm
           </button>
+
+          <div class="hidden lg:flex ml-8">{renderThemeChanger()}</div>
         </div>
       </div>
     </header>
