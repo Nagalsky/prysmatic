@@ -18,14 +18,14 @@ export default function PrysmOpenSource({ ...restProps }) {
           Prysm empowers developers to build a fairer financial world
         </h3>
 
-        <div className="mb-[105px] max-w-[754px] w-full mx-auto hidden md:block">
+        <div className="mb-[105px] w-[680px] mx-auto hidden md:block">
           <Image
             src="/images/open-source-banner.png"
             alt="open-source-banner"
-            width={100}
-            height={100}
+            width={680}
+            height={560}
             quality={100}
-            layout="responsive"
+            layout="fixed"
             priority={true}
           />
         </div>
@@ -34,10 +34,11 @@ export default function PrysmOpenSource({ ...restProps }) {
           <Image
             src="/images/open-source-banner-mobile.png"
             alt="open-source-banner-mobile"
-            width={100}
             height={100}
+            width={100}
             quality={100}
             layout="responsive"
+            objectFit="contain"
             priority={true}
           />
         </div>
