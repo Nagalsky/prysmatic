@@ -1,9 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import bannerImg from '../assets/images/open-source-banner.png'
-import bannerMobileImg from '../assets/images/open-source-banner-mobile.png'
-import futuristicEthereumImg from '../assets/images/futuristic-ethereum.png'
-import prysmsImg from '../assets/images/prysms.png'
 
 export default function PrysmOpenSource({ ...restProps }) {
   return (
@@ -22,25 +18,27 @@ export default function PrysmOpenSource({ ...restProps }) {
           Prysm empowers developers to build a fairer financial world
         </h3>
 
-        <div className="mb-[105px] max-w-[754px] mx-auto hidden md:block">
+        <div className="mb-[105px] max-w-[754px] w-full mx-auto hidden md:block">
           <Image
-            src={bannerImg}
-            alt="banner"
-            title="banner"
+            src="/images/open-source-banner.png"
+            alt="open-source-banner"
+            width={100}
+            height={100}
+            quality={100}
             layout="responsive"
             priority={true}
-            placeholder="blur"
           />
         </div>
 
         <div className="mb-[60px] md:hidden">
           <Image
-            src={bannerMobileImg}
-            alt="banner"
-            title="banner"
+            src="/images/open-source-banner-mobile.png"
+            alt="open-source-banner-mobile"
+            width={100}
+            height={100}
+            quality={100}
             layout="responsive"
             priority={true}
-            placeholder="blur"
           />
         </div>
 
@@ -48,12 +46,13 @@ export default function PrysmOpenSource({ ...restProps }) {
           <div className="flex flex-column items-center gap-[20px] justify-center flex-col">
             <div className="w-[90px] md:w-[150px]">
               <Image
-                src={futuristicEthereumImg}
-                alt="banner"
-                title="banner"
+                src="/images/futuristic-ethereum.png"
+                alt="futuristic-ethereum"
+                width={100}
+                height={100}
+                quality={100}
                 layout="responsive"
                 priority={true}
-                placeholder="blur"
               />
             </div>
             <p className="sm:text-[20px] md:text-[25px] leading-[1.3]">
@@ -65,12 +64,13 @@ export default function PrysmOpenSource({ ...restProps }) {
           <div className="flex flex-column items-center gap-[20px] justify-center flex-col">
             <div className="w-[90px] md:w-[150px]">
               <Image
-                src={prysmsImg}
-                alt="banner"
-                title="banner"
+                src="/images/prysms.png"
+                alt="prysms"
+                width={100}
+                height={100}
+                quality={100}
                 layout="responsive"
                 priority={true}
-                placeholder="blur"
               />
             </div>
             <p className="sm:text-[20px] md:text-[25px] leading-[1.3]">
