@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import PrysmHero from '../sections/prysm-hero'
 import PrysmOpenSource from '../sections/prysm-open-source'
+import PrysmDevelop from '../sections/prysm-develop'
+import PrysmSponsors from '../sections/prysm-sponsors'
 
 export default function Home() {
   return (
@@ -14,6 +16,10 @@ export default function Home() {
       <PrysmHero />
 
       <PrysmOpenSource />
+
+      <PrysmDevelop />
+
+      <PrysmSponsors />
     </>
   )
 }

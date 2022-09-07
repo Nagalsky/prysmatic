@@ -41,6 +41,7 @@ module.exports = {
         'yellow-500': '#edc94a',
         'yellow-600': '#d2b343',
         'sky-500': '#75a8ff',
+        'sky-600': '#8eb8ff',
         'rose-500': '#e35484',
       },
       backgroundImage: {

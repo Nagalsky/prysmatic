@@ -1,20 +1,46 @@
 import React from 'react'
 import Image from 'next/image'
-import bannerImg from '../assets/images/open-source-banner.png'
-import bannerMobileImg from '../assets/images/open-source-banner-mobile.png'
-import futuristicEthereumImg from '../assets/images/futuristic-ethereum.png'
-import prysmsImg from '../assets/images/prysms.png'
 
-export default function Prysmdevelop({ ...restProps }) {
+export default function PrysmDevelop({ ...restProps }) {
   return (
-    <section className="pt-[20px] py-[40px] text-center" {...restProps}>
+    <section className="py-[20px] md:py-[40px] text-center" {...restProps}>
       <div className="container">
-        <h2 className="font-heading text-[30px] sm:text-[36px] md:text-[40px] lg:text-[48px] leading-[1.35] mb-[40px]">
-          Free .
-          <span className="bg-rose-500 inline-block px-1">Open-Source</span> .
-          Globally
-          <span className="xl:block">Accessible</span>
+        <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px]">
+          DEVELOP
+        </h3>
+
+        <h2 className="text-[30px] md:text-[40px] lg:text-[48px] leading-[1.25] font-heading  mb-10 md:mb-16">
+          Start coding with us!
+          <span className="block font-sans text-[20px] md:text-[30px] lg:text-[40px]">
+            Here&#39;s a glimpse into our code
+          </span>
         </h2>
+
+        <div className="grid md:grid-cols-2 gap-5 md:gap-10 relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] px-5 md:px-0">
+          <div>
+            <Image
+              src="/images/screenshot-left.png"
+              alt="screenshot-left"
+              width={100}
+              height={100}
+              quality={100}
+              layout="responsive"
+              className="w-full"
+              priority={true}
+            />
+          </div>
+          <div>
+            <Image
+              src="/images/screenshot-right.png"
+              alt="screenshot-right"
+              width={100}
+              height={100}
+              quality={100}
+              layout="responsive"
+              className="w-full"
+            />
+          </div>
+        </div>
       </div>
     </section>
   )
