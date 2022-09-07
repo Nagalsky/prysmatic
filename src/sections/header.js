@@ -10,6 +10,7 @@ import {
   MobileMenuOpen,
   MobileMenuClose,
 } from '../lib/icons'
+import { HeaderLogo } from '../components/header-logo'
 
 export default function Header({ ...restProps }) {
   const router = useRouter()
@@ -49,7 +50,7 @@ export default function Header({ ...restProps }) {
       {...restProps}
     >
       <div className="container flex items-center gap-4 lg:gap-16 xxl:gap-[268px]">
-        <Link href="/">
+        {/* <Link href="/">
           <a className="block w-[130px] md:w-[200px] shrink-0">
             <svg
               width="100%"
@@ -96,7 +97,9 @@ export default function Header({ ...restProps }) {
               </g>
             </svg>
           </a>
-        </Link>
+        </Link> */}
+
+        <HeaderLogo />
 
         <div className="flex gap-6 items-center lg:hidden ml-auto">
           <div className="flex">{renderThemeChanger()}</div>
