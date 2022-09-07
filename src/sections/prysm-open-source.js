@@ -14,7 +14,7 @@ export default function PrysmOpenSource({ ...restProps }) {
           Globally
           <span className="xl:block">Accessible</span>
         </h2>
-        <h3 className="font-lead text-[20px] sm:text-[26px] md:text-[30px] lg:text-[40px] mx-auto max-w-[920px] leading-[1.25] mb-[40px] md:mb-16">
+        <h3 className="text-[20px] sm:text-[26px] md:text-[30px] lg:text-[40px] mx-auto max-w-[920px] leading-[1.25] mb-[40px] md:mb-16">
           Prysm empowers developers to build a fairer financial world
         </h3>
 
