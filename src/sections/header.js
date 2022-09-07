@@ -16,7 +16,7 @@ export default function Header({ ...restProps }) {
 
   const [isOpened, setIsOpened] = useState(false)
 
-  const { theme, setTheme } = useTheme()
+  const { systemTheme, theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -26,7 +26,9 @@ export default function Header({ ...restProps }) {
   const renderThemeChanger = () => {
     if (!mounted) return null
 
-    if (theme === 'dark') {
+    const currentTheme = theme === 'system' ? systemTheme : theme
+
+    if (currentTheme === 'dark') {
       return (
         <button role="button" onClick={() => setTheme('light')}>
           <Light className="w-6 h-6 cursor-pointer" />

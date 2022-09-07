@@ -3,7 +3,10 @@ import Image from 'next/image'
 
 export default function PrysmDevelop({ ...restProps }) {
   return (
-    <section className="py-[20px] md:py-[40px] text-center" {...restProps}>
+    <section
+      className="py-[20px] md:py-[40px] text-center overflow-x-hidden overflow-y-auto"
+      {...restProps}
+    >
       <div className="container">
         <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px]">
           DEVELOP
