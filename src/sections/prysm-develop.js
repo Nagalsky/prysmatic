@@ -38,6 +38,7 @@ export default function PrysmDevelop({ ...restProps }) {
               quality={100}
               layout="responsive"
               className="w-full"
+              priority={true}
             />
           </div>
         </div>
