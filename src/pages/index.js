@@ -3,6 +3,7 @@ import PrysmHero from '../sections/prysm-hero'
 import PrysmOpenSource from '../sections/prysm-open-source'
 import PrysmDevelop from '../sections/prysm-develop'
 import PrysmSponsors from '../sections/prysm-sponsors'
+import PrysmTeamWork from '../sections/prysm-teamwork'
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
       <PrysmDevelop />
 
       <PrysmSponsors />
+
+      <PrysmTeamWork />
     </>
   )
 }
