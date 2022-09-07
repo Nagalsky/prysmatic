@@ -76,7 +76,10 @@ export default function PrysmSponsors({ ...restProps }) {
   )
 
   return (
-    <section className="py-5 md:py-16 text-center" {...restProps}>
+    <section
+      className="py-5 md:py-16 text-center overflow-x-hidden overflow-y-auto"
+      {...restProps}
+    >
       <div className="container">
         <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px]">
           SPONSORS & GRANTS
