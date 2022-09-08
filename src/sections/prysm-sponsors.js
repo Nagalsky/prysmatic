@@ -81,7 +81,7 @@ export default function PrysmSponsors({ ...restProps }) {
       {...restProps}
     >
       <div className="container">
-        <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px]">
+        <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-purple-600 dark:text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px]">
           SPONSORS & GRANTS
         </h3>
 
@@ -113,12 +113,12 @@ export default function PrysmSponsors({ ...restProps }) {
 
           {loaded && instanceRef.current && (
             <>
-              <div className="hidden md:flex items-center justify-center gap-10 absolute left-0 w-full bottom-[5%] z-20 [&>*]:cursor-pointer [&>*]:rounded-full [&>*]:w-8 [&>*]:h-8 [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:text-dark-500 [&>*]:bg-yellow-500 [&>*]:transition">
+              <div className="hidden md:flex items-center justify-center gap-10 absolute left-0 w-full bottom-[5%] z-20 [&>*]:cursor-pointer [&>*]:rounded-full [&>*]:w-8 [&>*]:h-8 [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:text-semi-white [&>*]:dark:text-dark-500 [&>*]:bg-purple-500 [&>*]:dark:bg-yellow-500 [&>*]:transition">
                 <div
                   onClick={(e) =>
                     e.stopPropagation() || instanceRef.current?.prev()
                   }
-                  className="hover:bg-yellow-600"
+                  className="hover:bg-purple-600 dark:hover:bg-yellow-600"
                 >
                   <ArrowLeft className="w-5 h-5" />
                 </div>
@@ -126,7 +126,7 @@ export default function PrysmSponsors({ ...restProps }) {
                   onClick={(e) =>
                     e.stopPropagation() || instanceRef.current?.next()
                   }
-                  className="hover:bg-yellow-600"
+                  className="hover:bg-purple-600 dark:hover:bg-yellow-600"
                 >
                   <ArrowRight className="w-5 h-5" />
                 </div>

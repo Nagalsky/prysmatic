@@ -17,14 +17,14 @@ export default function PrysmTeamWork({ ...restProps }) {
               height={100}
               quality={100}
               layout="responsive"
-              className="w-full"
+              className="w-full hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0"
               objectFit="contain"
               priority={true}
             />
           </div>
 
           <div className="space-y-[20px] md:space-y-[40px]">
-            <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 tracking-[1.08px]">
+            <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-purple-600 dark:text-sky-600 tracking-[1.08px]">
               THE BEST OF TEAMWORK
             </h3>
 
@@ -32,8 +32,10 @@ export default function PrysmTeamWork({ ...restProps }) {
               Join our contributors
               <span className="block">
                 Let{'’'}s
-                <span className="inline-block bg-semi-white align-super w-[50px] lg:w-[90px] h-[7px] mx-3 relative top-[2px] md:top-0"></span>
-                <span className="uppercase text-rose-500">CO-CREATE</span>
+                <span className="inline-block bg-dark-500 dark:bg-semi-white align-super w-[50px] lg:w-[90px] h-[7px] mx-3 relative top-[2px] md:top-0"></span>
+                <span className="uppercase text-purple-500 dark:text-rose-500">
+                  CO-CREATE
+                </span>
               </span>
             </h2>
 
@@ -45,7 +47,7 @@ export default function PrysmTeamWork({ ...restProps }) {
 
             <button
               type="button"
-              className="inline-flex items-center gap-1 border-2 rounded-[10px] text-dark-500 transition py-[4px] px-[20px] border-yellow-500 bg-yellow-500 font-heading hover:bg-yellow-600 hover:border-yellow-600"
+              className="inline-flex items-center gap-1 rounded-[10px] text-semi-white dark:text-dark-500 transition py-[6px] px-[20px] bg-purple-500 hover:bg-purple-600 dark:bg-yellow-500 font-heading dark:hover:bg-yellow-600"
             >
               <Discord className="w-8 h-8" />
               Join Our Discord

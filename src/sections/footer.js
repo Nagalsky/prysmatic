@@ -9,7 +9,7 @@ export default function Footer({ ...restProps }) {
       className="bg-footer-gradient text-semi-white py-[20px] md:py-8 shrink-0"
       {...restProps}
     >
-      <div className="container">
+      <div className="px-4 lg:px-8 xl:px-16">
         <div className="grid md:grid-cols-[200px_1fr] xxl:grid-cols-2 gap-9 xxl:gap-0">
           <div className="w-[200px] mx-auto lg:ml-0 flex flex-col items-center gap-9">
             <FooterLogo />
@@ -39,7 +39,7 @@ export default function Footer({ ...restProps }) {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-[10px] md:gap-4 lg:gap-9 md:pt-4 [&>*]:text-base [&>*]:font-heading text-center md:text-start">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[10px] md:gap-4 lg:gap-9 md:pt-4 [&>*]:text-base [&>*]:font-heading text-center md:text-start">
             <div>
               <h3 className="border-b-semi-white border-b inline-block px-3 md:px-0 mb-4">
                 Projects

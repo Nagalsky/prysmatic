@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 
 export default function PrysmOpenSource({ ...restProps }) {
@@ -10,8 +9,10 @@ export default function PrysmOpenSource({ ...restProps }) {
       <div className="container">
         <h2 className="font-heading text-[30px] sm:text-[36px] md:text-[40px] lg:text-[48px] leading-[1.35] mb-[40px]">
           Free .
-          <span className="bg-rose-500 inline-block px-1">Open-Source</span> .
-          Globally
+          <span className="bg-purple-500 dark:bg-rose-500 inline-block px-1">
+            Open-Source
+          </span>{' '}
+          . Globally
           <span className="xl:block">Accessible</span>
         </h2>
         <h3 className="text-[20px] sm:text-[26px] md:text-[30px] lg:text-[40px] mx-auto max-w-[920px] leading-[1.25] mb-[40px] md:mb-16">
@@ -27,6 +28,7 @@ export default function PrysmOpenSource({ ...restProps }) {
             quality={100}
             layout="responsive"
             priority={true}
+            className="hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0"
           />
         </div>
 
@@ -54,6 +56,7 @@ export default function PrysmOpenSource({ ...restProps }) {
                 quality={100}
                 layout="responsive"
                 priority={true}
+                className="hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0"
               />
             </div>
             <p className="sm:text-[20px] md:text-[25px] leading-[1.3]">
@@ -61,7 +64,7 @@ export default function PrysmOpenSource({ ...restProps }) {
               value and reduce emissions by 99.9%
             </p>
           </div>
-          <div className="border-t-[3px] md:border-l-[3px] md:border-t-0 border-dashed border-rose-500"></div>
+          <div className="border-t-[3px] md:border-l-[3px] md:border-t-0 border-dashed border-purple-500 dark:border-rose-500"></div>
           <div className="flex flex-column items-center gap-[20px] justify-center flex-col">
             <div className="w-[90px] md:w-[150px]">
               <Image
@@ -72,6 +75,7 @@ export default function PrysmOpenSource({ ...restProps }) {
                 quality={100}
                 layout="responsive"
                 priority={true}
+                className="hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0"
               />
             </div>
             <p className="sm:text-[20px] md:text-[25px] leading-[1.3]">

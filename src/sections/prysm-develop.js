@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 
 export default function PrysmDevelop({ ...restProps }) {
@@ -8,7 +7,7 @@ export default function PrysmDevelop({ ...restProps }) {
       {...restProps}
     >
       <div className="container">
-        <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px]">
+        <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-purple-600 dark:text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px]">
           DEVELOP
         </h3>
 

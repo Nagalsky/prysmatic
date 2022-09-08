@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, GitHub } from '../lib/icons'
@@ -18,6 +17,7 @@ export default function PrysmHero({ ...restProps }) {
           quality={100}
           layout="responsive"
           priority={true}
+          className="hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0"
         />
       </div>
 
@@ -28,10 +28,10 @@ export default function PrysmHero({ ...restProps }) {
           </h1>
           <h2 className="font-heading text-[30px] sm:text-[26px] lg:text-[40px] xl:text-[48px] leading-[1.6] md:leading-[1.4] mb-[20px] md:mb-[40px]">
             Run NODE
-            <span className="inline-block bg-semi-white align-super w-[50px] lg:w-[90px] h-[7px] ml-2 relative top-[2px] md:top-0"></span>
+            <span className="inline-block bg-dark-500 dark:bg-semi-white align-super w-[50px] lg:w-[90px] h-[7px] ml-2 relative top-[2px] md:top-0"></span>
             <span className="block">
               and use{' '}
-              <span className="text-sky-500 uppercase">
+              <span className="text-purple-500 dark:text-sky-500 uppercase">
                 ETH <span className="block sm:inline">SUSTAINABLY</span>
               </span>
             </span>

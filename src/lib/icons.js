@@ -222,47 +222,37 @@ export function Discord({ className }) {
       className={className}
       viewBox="0 0 32 33"
       fill="none"
+      stroke="currentColor"
       xmlns="http://www.w3.org/2000/svg"
+      strokeWidth={2}
     >
       <path
         d="M12.5 17.2979C13.0523 17.2979 13.5 16.8501 13.5 16.2979C13.5 15.7456 13.0523 15.2979 12.5 15.2979C11.9477 15.2979 11.5 15.7456 11.5 16.2979C11.5 16.8501 11.9477 17.2979 12.5 17.2979Z"
-        stroke="#1B2022"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M18.5 17.2979C19.0523 17.2979 19.5 16.8501 19.5 16.2979C19.5 15.7456 19.0523 15.2979 18.5 15.2979C17.9477 15.2979 17.5 15.7456 17.5 16.2979C17.5 16.8501 17.9477 17.2979 18.5 17.2979Z"
-        stroke="#1B2022"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M11 11.7979C14.5 10.7979 16.5 10.7979 20 11.7979"
-        stroke="#1B2022"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M10.5 20.7979C14 21.7979 17 21.7979 20.5 20.7979"
-        stroke="#1B2022"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M19 21.2979C19 22.2979 20.5 24.2979 21 24.2979C22.5 24.2979 23.833 22.6309 24.5 21.2979C25.167 19.6309 25 15.4649 23 9.79785C21.543 8.78285 20 8.45785 18.5 8.29785L17.5 10.7979"
-        stroke="#1B2022"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M12.0001 21.2979C12.0001 22.2979 10.6441 24.2979 10.1681 24.2979C8.73911 24.2979 7.47011 22.6309 6.83511 21.2979C6.20011 19.6309 6.35911 15.4649 8.26311 9.79785C9.65111 8.78285 11.0451 8.45785 12.5001 8.29785L13.5001 10.7979"
-        stroke="#1B2022"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
