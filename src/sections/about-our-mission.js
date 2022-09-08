@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { Decentralized, Permission, Document } from '../lib/icons'
+import {Decentralized, Permission, Document} from '../lib/icons'
 
-export default function AboutOurMission({ ...restProps }) {
+export default function AboutOurMission({...restProps}) {
   return (
     <section className="py-5 md:pt-16 md:pb-8 text-center" {...restProps}>
       <div className="container">
@@ -27,7 +27,7 @@ export default function AboutOurMission({ ...restProps }) {
               />
             </div>
             <p className="md:text-[20px] lg:text-[25px] leading-[1.3]">
-              Enhance Ethereum's scalability and usability via dependable
+              Enhance Ethereum&#39;s scalability and usability via dependable
               technical infrastructure
             </p>
           </div>
