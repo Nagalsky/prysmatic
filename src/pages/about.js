@@ -21,7 +21,7 @@ export default function Home() {
         <div className="container">
           <AboutMeetTeam />
 
-          <PrysmTeamWork nested={true} />
+          <PrysmTeamWork isNested />
         </div>
       </section>
     </>
