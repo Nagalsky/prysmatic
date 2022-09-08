@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import {useState} from 'react'
 import Image from 'next/image'
-import { useKeenSlider } from 'keen-slider/react'
-import { ArrowLeft, ArrowRight } from '../lib/icons'
+import {useKeenSlider} from 'keen-slider/react'
+import {ArrowLeft, ArrowRight} from '../lib/icons'
 
 import 'keen-slider/keen-slider.min.css'
 
@@ -18,7 +18,7 @@ const slides = [
   '/images/sponsors-slide-5.png',
 ]
 
-export default function PrysmSponsors({ ...restProps }) {
+export default function PrysmSponsors({...restProps}) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceRef] = useKeenSlider(
@@ -31,13 +31,13 @@ export default function PrysmSponsors({ ...restProps }) {
       loop: true,
       breakpoints: {
         '(min-width: 540px)': {
-          slides: { perView: 3, spacing: 36 },
+          slides: {perView: 3, spacing: 36},
         },
         '(min-width: 768px)': {
-          slides: { perView: 4, spacing: 36 },
+          slides: {perView: 4, spacing: 36},
         },
         '(min-width: 1024px)': {
-          slides: { perView: 5, spacing: 36 },
+          slides: {perView: 5, spacing: 36},
         },
       },
       slideChanged(slider) {
@@ -86,8 +86,8 @@ export default function PrysmSponsors({ ...restProps }) {
         </h3>
 
         <h2 className="text-[20px] md:text-[30px] lg:text-[40px] font-heading mx-auto max-w-[930px] leading-[1.3]">
-          We&#39;re fully funded by grants and {'‘'}investors{'’'} in the future
-          of finance. Meet our sponsors.
+          We&#39;re fully funded by grants and &lsquo;investors&rsquo; in the
+          future of finance. Meet our sponsors.
         </h2>
 
         <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] px-5 md:px-0">

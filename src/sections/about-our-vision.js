@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { useKeenSlider } from 'keen-slider/react'
+import {useState} from 'react'
+import {useKeenSlider} from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 
 const slides = [
@@ -8,7 +8,7 @@ const slides = [
   'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.',
 ]
 
-export default function AboutOurVision({ ...restProps }) {
+export default function AboutOurVision({...restProps}) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -29,7 +29,7 @@ export default function AboutOurVision({ ...restProps }) {
         </h3>
 
         <h2 className="text-[20px] md:text-[30px] lg:text-[40px] font-heading mb-8 md:mb-16 mx-auto max-w-[800px] leading-[1.3]">
-          Accelerate the world{'’'}s transition to sustainable economics
+          Accelerate the world&#39;s transition to sustainable economics
         </h2>
 
         <div className="mx-auto max-w-[868px] rounded-large p-[20px] md:p-16 bg-cover bg-no-repeat bg-[url('/images/vision-gallery-bg.png')] dark:bg-none bg-white dark:bg-dark-500 grid grid-cols-[62px_1fr] gap-5 md:gap-[30px] text-left">

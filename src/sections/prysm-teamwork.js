@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { Discord } from '../lib/icons'
+import {Discord} from '../lib/icons'
 
-export default function PrysmTeamWork({ ...restProps }) {
+export default function PrysmTeamWork({...restProps}) {
   return (
     <section
       className="pt-5 pb-20 md:py-16 text-center relative"
@@ -31,7 +31,7 @@ export default function PrysmTeamWork({ ...restProps }) {
             <h2 className="text-[30px] sm:text-[36px] md:text-[40px] lg:text-[48px] leading-[1.35] font-heading">
               Join our contributors
               <span className="block">
-                Let{'’'}s
+                Let&#39;s
                 <span className="inline-block bg-dark-500 dark:bg-semi-white align-super w-[50px] lg:w-[90px] h-[7px] mx-3 relative top-[2px] md:top-0"></span>
                 <span className="uppercase text-purple-500 dark:text-rose-500">
                   CO-CREATE
@@ -41,7 +41,7 @@ export default function PrysmTeamWork({ ...restProps }) {
 
             <p className="sm:text-[20px] md:text-[25px] leading-[1.3] tracking-[0.5px] md:!mb-4">
               Challenge, inspire, and collaborate with like-minded developers
-              across the globe. We may be separated by location but we{'’'}re
+              across the globe. We may be separated by location but we&#39;re
               connected by a passion for a better and fairer world.
             </p>
 
