@@ -25,6 +25,11 @@ export default function Header({...restProps}) {
     document.body.classList.toggle('overflow-hidden')
   }
 
+  const switchRoutes = () => {
+    setIsOpened(false)
+    document.body.classList.remove('overflow-hidden')
+  }
+
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -56,7 +61,7 @@ export default function Header({...restProps}) {
         {...restProps}
       >
         <div className="px-4 lg:px-8 xl:px-16 flex items-center gap-4 lg:gap-16 xxl:gap-[268px]">
-          <Link href="/">
+          {/* <Link href="/">
             <a className="block w-[130px] md:w-[200px] shrink-0">
               <svg
                 width="100%"
@@ -103,9 +108,9 @@ export default function Header({...restProps}) {
                 </g>
               </svg>
             </a>
-          </Link>
+          </Link> */}
 
-          {/* <HeaderLogo /> */}
+          <HeaderLogo />
 
           <div className="flex gap-6 items-center lg:hidden ml-auto">
             <div className="flex">{renderThemeChanger()}</div>
@@ -131,10 +136,7 @@ export default function Header({...restProps}) {
             <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 xl:gap-8 xxl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center grow">
               <Link href="/">
                 <a
-                  onClick={() => {
-                    setIsOpened(false)
-                    document.body.classList.remove('overflow-hidden')
-                  }}
+                  onClick={switchRoutes}
                   className={`${
                     router.pathname === '/'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -147,10 +149,7 @@ export default function Header({...restProps}) {
               </Link>
               <Link href="/about">
                 <a
-                  onClick={() => {
-                    setIsOpened(false)
-                    document.body.classList.remove('overflow-hidden')
-                  }}
+                  onClick={switchRoutes}
                   className={`${
                     router.pathname === '/about'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -163,10 +162,7 @@ export default function Header({...restProps}) {
               </Link>
               <Link href="/careers">
                 <a
-                  onClick={() => {
-                    setIsOpened(false)
-                    document.body.classList.remove('overflow-hidden')
-                  }}
+                  onClick={switchRoutes}
                   className={`${
                     router.pathname === '/careers'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -182,10 +178,7 @@ export default function Header({...restProps}) {
                 target="_blank"
                 href="https://github.com/"
                 rel="noopener noreferrer"
-                onClick={() => {
-                  setIsOpened(false)
-                  document.body.classList.remove('overflow-hidden')
-                }}
+                onClick={switchRoutes}
               >
                 Docs
                 <ArrowRight className="w-8 h-8 lg:hidden" />

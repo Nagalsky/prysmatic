@@ -17,7 +17,7 @@ export default function Home() {
 
       <AboutOurVision />
 
-      <section className="py-6 md:py-16 bg-body-gradient dark:bg-none">
+      <section className="py-6 md:py-16 bg-body-gradient dark:bg-none overflow-x-hidden overflow-y-auto">
         <div className="container">
           <AboutMeetTeam />
 
