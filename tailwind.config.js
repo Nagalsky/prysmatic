@@ -2,6 +2,7 @@
 
 const bodyFontFamily = '"Inter-Regular", sans-serif'
 const headingFontFamily = '"Sora-SemiBold", sans-serif'
+const headingBoldFontFamily = '"Sora-Bold", sans-serif'
 const leadFontFamily = '"Sora-Regular", sans-serif'
 const subHeadingFontFamily = '"DM-Mono-Regular", sans-serif'
 
@@ -16,6 +17,7 @@ module.exports = {
     fontFamily: {
       sans: bodyFontFamily,
       heading: headingFontFamily,
+      'heading-bold': headingBoldFontFamily,
       subheading: subHeadingFontFamily,
       lead: leadFontFamily,
     },
@@ -36,6 +38,7 @@ module.exports = {
       colors: {
         'semi-white': '#eee8e1',
         'dark-500': '#1b2022',
+        'purple-400': '#AD8AFF',
         'purple-500': '#825AFF',
         'purple-600': '#6540da',
         'yellow-500': '#edc94a',
@@ -48,6 +51,10 @@ module.exports = {
         'body-gradient':
           'linear-gradient(to top, #484b4b 0%, #252a2b 53%, #1b2022 100%)',
         'footer-gradient': 'linear-gradient(113deg, #825aff 1%, #483681 92%)',
+      },
+      borderRadius: {
+        'rounded-xl': '10px',
+        large: '20px',
       },
     },
   },

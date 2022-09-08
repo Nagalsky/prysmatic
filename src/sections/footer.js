@@ -88,18 +88,39 @@ export default function Footer({ ...restProps }) {
               </h3>
 
               <div className="grid gap-[10px] [&>*]:py-4 [&>*]:transition">
-                <Link href="/">
-                  <a className="hover:text-white">Github</a>
-                </Link>
-                <Link href="/">
-                  <a className="hover:text-white">Docs</a>
-                </Link>
-                <Link href="/">
-                  <a className="hover:text-white">Media Kit</a>
-                </Link>
-                <Link href="/">
-                  <a className="hover:text-white">Brand Guidelines</a>
-                </Link>
+                <a
+                  target="_blank"
+                  href="https://github.com/"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Github
+                </a>
+
+                <a
+                  target="_blank"
+                  href="https://github.com/"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Docs
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Media Kit
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/"
+                  rel="noopener noreferrer"
+                  className="hover:text-white"
+                >
+                  Brand Guidelines
+                </a>
               </div>
             </div>
           </div>

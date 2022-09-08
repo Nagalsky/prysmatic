@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import AboutOurMission from '../sections/about-our-mission'
+import AboutOurVision from '../sections/about-our-vision'
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       </Head>
 
       <AboutOurMission />
+
+      <AboutOurVision />
     </>
   )
 }

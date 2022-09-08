@@ -42,6 +42,7 @@ export default function PrysmOpenSource({ ...restProps }) {
             layout="responsive"
             objectFit="contain"
             priority={true}
+            className="hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0"
           />
         </div>
 
@@ -56,7 +57,6 @@ export default function PrysmOpenSource({ ...restProps }) {
                 quality={100}
                 layout="responsive"
                 priority={true}
-                className="hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0"
               />
             </div>
             <p className="sm:text-[20px] md:text-[25px] leading-[1.3]">
@@ -75,7 +75,6 @@ export default function PrysmOpenSource({ ...restProps }) {
                 quality={100}
                 layout="responsive"
                 priority={true}
-                className="hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0"
               />
             </div>
             <p className="sm:text-[20px] md:text-[25px] leading-[1.3]">

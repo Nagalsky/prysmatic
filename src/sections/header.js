@@ -52,7 +52,7 @@ export default function Header({ ...restProps }) {
   return (
     <>
       <header
-        className="bg-semi-white dark:bg-dark-500 text-dark-500 dark:text-semi-white text-base font-heading shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] py-[20px] lg:py-[26px] relative shrink-0 z-50"
+        className="bg-semi-white dark:bg-dark-500 text-dark-500 dark:text-semi-white text-base font-heading shadow-[0_4px_4px_0_rgba(0,0,0,0.05)] dark:shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] py-[20px] lg:py-[26px] relative shrink-0 z-50"
         {...restProps}
       >
         <div className="px-4 lg:px-8 xl:px-16 flex items-center gap-4 lg:gap-16 xxl:gap-[268px]">
@@ -126,7 +126,7 @@ export default function Header({ ...restProps }) {
           <div
             className={`${
               isOpened ? 'flex' : 'hidden'
-            } grow flex-col items-start lg:flex lg:flex-row lg:items-center lg:justify-end absolute lg:static top-full bg-semi-white dark:bg-body-gradient lg:bg-transparent lg:dark:bg-none lg:dark:bg-transparent w-full lg:w-auto z-[50] left-0 p-[20px] lg:p-0 max-h-[calc(100vh_-_72px)] overflow-auto shadow-[0_4px_4px_0_rgba(0,0,0,0.25)_inset] lg:shadow-none`}
+            } grow flex-col items-start lg:flex lg:flex-row lg:items-center lg:justify-end absolute lg:static top-full bg-semi-white dark:bg-body-gradient lg:bg-transparent lg:dark:bg-none lg:dark:bg-transparent w-full lg:w-auto z-[50] left-0 p-[20px] lg:p-0 max-h-[calc(100vh_-_72px)] overflow-auto shadow-[0_4px_4px_0_rgba(0,0,0,0.05)_inset] dark:shadow-[0_4px_4px_0_rgba(0,0,0,0.25)_inset] lg:shadow-none dark:lg:shadow-none`}
           >
             <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 xl:gap-8 xxl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center grow">
               <Link href="/">
@@ -168,28 +168,26 @@ export default function Header({ ...restProps }) {
                   <ArrowRight className="w-8 h-8 lg:hidden" />
                 </a>
               </Link>
-              <Link href="/docs">
-                <a
-                  onClick={() => setIsOpened(false)}
-                  className={`${
-                    router.pathname === '/docs'
-                      ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
-                      : 'lg:border-b-transparent'
-                  } text-dark-500 dark:text-white dark:hover:text-white lg:border-b`}
-                >
-                  Docs
-                  <ArrowRight className="w-8 h-8 lg:hidden" />
-                </a>
-              </Link>
+              <a
+                className="text-dark-500 dark:text-white"
+                target="_blank"
+                href="https://github.com/"
+                rel="noopener noreferrer"
+              >
+                Docs
+                <ArrowRight className="w-8 h-8 lg:hidden" />
+              </a>
             </nav>
 
-            <button
-              type="button"
+            <a
+              target="_blank"
+              href="https://github.com/"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-4 border-2 border-purple-500 dark:border-yellow-500 rounded-[10px] text-purple-500 dark:text-yellow-500 transition py-[4px] px-[20px] hover:text-white hover:bg-purple-500 dark:hover:text-dark-500 dark:hover:bg-yellow-500 mx-auto lg:mx-0 font-heading mt-[20px] lg:mt-0 lg:ml-4"
             >
               <GitHub className="w-8 h-8" />
               Install Prysm
-            </button>
+            </a>
 
             <div className="hidden lg:flex ml-8">{renderThemeChanger()}</div>
           </div>
