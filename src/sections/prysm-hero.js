@@ -44,14 +44,14 @@ export default function PrysmHero({ ...restProps }) {
           <div className="flex flex-col sm:flex-wrap sm:flex-row items-center gap-6 sm:justify-start">
             <button
               type="button"
-              className="inline-flex items-center gap-4 border-2 rounded-[10px] text-dark-500 transition py-[4px] px-[20px] border-yellow-500 bg-yellow-500 font-heading hover:bg-yellow-600 hover:border-yellow-600"
+              className="inline-flex items-center gap-4 rounded-[10px] text-semi-white dark:text-dark-500 transition py-[6px] px-[20px] font-heading bg-purple-500 hover:bg-purple-600 dark:bg-yellow-500"
             >
               <GitHub className="w-8 h-8" />
               Install Prysm
             </button>
 
             <Link href="/">
-              <a className="inline-flex items-center gap-4 text-yellow-500 transition hover:text-yellow-600">
+              <a className="inline-flex items-center gap-4 transition font-heading text-purple-500 hover:text-purple-600 dark:text-yellow-500 dark:hover:text-yellow-600">
                 Read Our Docs
                 <ArrowRight className="w-6 h-6" />
               </a>
