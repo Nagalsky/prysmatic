@@ -85,7 +85,7 @@ export default function AboutOurMission({...restProps}) {
                 in the world, Ethereum has distinguished itself as a major
                 stakeholder in the global pursuit of Decentralized Finance
                 (DE-Fi). By focusing on strong security and building a cohesive
-                community, Ethereum continues to win users' trust.
+                community, Ethereum continues to win users&#39; trust.
               </p>
               <p>
                 Ethereum is famous for its huge and highly receptive community
