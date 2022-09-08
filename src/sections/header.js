@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useTheme } from 'next-themes'
+import {useRouter} from 'next/router'
+import {useTheme} from 'next-themes'
 import {
   Dark,
   Light,
@@ -10,14 +10,14 @@ import {
   MobileMenuOpen,
   MobileMenuClose,
 } from '../lib/icons'
-import { HeaderLogo } from '../components/header-logo'
+import {HeaderLogo} from '../components/header-logo'
 
-export default function Header({ ...restProps }) {
+export default function Header({...restProps}) {
   const router = useRouter()
 
   const [isOpened, setIsOpened] = useState(false)
 
-  const { systemTheme, theme, setTheme } = useTheme()
+  const {systemTheme, theme, setTheme} = useTheme()
   const [mounted, setMounted] = useState(false)
 
   const toggleMobileMenu = () => {
@@ -131,7 +131,7 @@ export default function Header({ ...restProps }) {
             <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 xl:gap-8 xxl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center grow">
               <Link href="/">
                 <a
-                  onClick={() => setIsOpened(false)}
+                  onClick={toggleMobileMenu}
                   className={`${
                     router.pathname === '/'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -144,7 +144,7 @@ export default function Header({ ...restProps }) {
               </Link>
               <Link href="/about">
                 <a
-                  onClick={() => setIsOpened(false)}
+                  onClick={toggleMobileMenu}
                   className={`${
                     router.pathname === '/about'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -157,7 +157,7 @@ export default function Header({ ...restProps }) {
               </Link>
               <Link href="/careers">
                 <a
-                  onClick={() => setIsOpened(false)}
+                  onClick={toggleMobileMenu}
                   className={`${
                     router.pathname === '/careers'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -173,6 +173,7 @@ export default function Header({ ...restProps }) {
                 target="_blank"
                 href="https://github.com/"
                 rel="noopener noreferrer"
+                onClick={toggleMobileMenu}
               >
                 Docs
                 <ArrowRight className="w-8 h-8 lg:hidden" />

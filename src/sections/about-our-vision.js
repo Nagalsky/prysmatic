@@ -12,15 +12,43 @@ const slides = [
 export default function AboutOurVision({...restProps}) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
-  const [sliderRef, instanceRef] = useKeenSlider({
-    loop: true,
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
+  const [sliderRef, instanceRef] = useKeenSlider(
+    {
+      loop: true,
+      slideChanged(slider) {
+        setCurrentSlide(slider.track.details.rel)
+      },
+      created() {
+        setLoaded(true)
+      },
     },
-    created() {
-      setLoaded(true)
-    },
-  })
+    [
+      (slider) => {
+        let timeout
+        function clearNextTimeout() {
+          clearTimeout(timeout)
+        }
+        function nextTimeout() {
+          clearTimeout(timeout)
+          timeout = setTimeout(() => {
+            slider.next()
+          }, 3000)
+        }
+        slider.on('created', () => {
+          slider.container.addEventListener('mouseover', () => {
+            clearNextTimeout()
+          })
+          slider.container.addEventListener('mouseout', () => {
+            nextTimeout()
+          })
+          nextTimeout()
+        })
+        slider.on('dragStarted', clearNextTimeout)
+        slider.on('animationEnded', nextTimeout)
+        slider.on('updated', nextTimeout)
+      },
+    ],
+  )
 
   return (
     <section className="py-6 md:py-16 text-center" {...restProps}>
