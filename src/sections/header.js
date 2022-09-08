@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useTheme } from 'next-themes'
+import {useRouter} from 'next/router'
+import {useTheme} from 'next-themes'
 import {
   Dark,
   Light,
@@ -10,14 +10,14 @@ import {
   MobileMenuOpen,
   MobileMenuClose,
 } from '../lib/icons'
-import { HeaderLogo } from '../components/header-logo'
+import {HeaderLogo} from '../components/header-logo'
 
-export default function Header({ ...restProps }) {
+export default function Header({...restProps}) {
   const router = useRouter()
 
   const [isOpened, setIsOpened] = useState(false)
 
-  const { systemTheme, theme, setTheme } = useTheme()
+  const {systemTheme, theme, setTheme} = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -130,7 +130,7 @@ export default function Header({ ...restProps }) {
                   router.asPath === '/'
                     ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white lg:border-b'
                     : ''
-                } dark:hover:text-white`}
+                } text-semi-white lg:text-dark-500 dark:text-white dark:hover:text-white`}
               >
                 Prysm
                 <ArrowRight className="w-8 h-8 lg:hidden" />
@@ -143,7 +143,7 @@ export default function Header({ ...restProps }) {
                   router.asPath === '/about'
                     ? 'lg:border-b-semi-white lg:border-b'
                     : ''
-                } dark:hover:text-white`}
+                } text-semi-white lg:text-dark-500 dark:text-white dark:hover:text-white`}
               >
                 About Us
                 <ArrowRight className="w-8 h-8 lg:hidden" />
@@ -156,7 +156,7 @@ export default function Header({ ...restProps }) {
                   router.asPath === '/careers'
                     ? 'lg:border-b-semi-white lg:border-b'
                     : ''
-                } dark:hover:text-white`}
+                } text-semi-white lg:text-dark-500 dark:text-white dark:hover:text-white`}
               >
                 Careers
                 <ArrowRight className="w-8 h-8 lg:hidden" />
@@ -169,7 +169,7 @@ export default function Header({ ...restProps }) {
                   router.asPath === '/docs'
                     ? 'lg:border-b-semi-white lg:border-b'
                     : ''
-                } dark:hover:text-white`}
+                } text-semi-white lg:text-dark-500 dark:text-white dark:hover:text-white`}
               >
                 Docs
                 <ArrowRight className="w-8 h-8 lg:hidden" />
