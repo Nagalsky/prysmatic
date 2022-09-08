@@ -14,6 +14,10 @@ export default function Home() {
       <AboutOurMission />
 
       <AboutOurVision />
+
+      <section className="py-6 md:py-16 bg-body-gradien">
+        <div className="container"></div>
+      </section>
     </>
   )
 }

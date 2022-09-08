@@ -131,7 +131,10 @@ export default function Header({...restProps}) {
             <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 xl:gap-8 xxl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center grow">
               <Link href="/">
                 <a
-                  onClick={toggleMobileMenu}
+                  onClick={() => {
+                    setIsOpened(false)
+                    document.body.classList.remove('overflow-hidden')
+                  }}
                   className={`${
                     router.pathname === '/'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -144,7 +147,10 @@ export default function Header({...restProps}) {
               </Link>
               <Link href="/about">
                 <a
-                  onClick={toggleMobileMenu}
+                  onClick={() => {
+                    setIsOpened(false)
+                    document.body.classList.remove('overflow-hidden')
+                  }}
                   className={`${
                     router.pathname === '/about'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -157,7 +163,10 @@ export default function Header({...restProps}) {
               </Link>
               <Link href="/careers">
                 <a
-                  onClick={toggleMobileMenu}
+                  onClick={() => {
+                    setIsOpened(false)
+                    document.body.classList.remove('overflow-hidden')
+                  }}
                   className={`${
                     router.pathname === '/careers'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -173,7 +182,10 @@ export default function Header({...restProps}) {
                 target="_blank"
                 href="https://github.com/"
                 rel="noopener noreferrer"
-                onClick={toggleMobileMenu}
+                onClick={() => {
+                  setIsOpened(false)
+                  document.body.classList.remove('overflow-hidden')
+                }}
               >
                 Docs
                 <ArrowRight className="w-8 h-8 lg:hidden" />
