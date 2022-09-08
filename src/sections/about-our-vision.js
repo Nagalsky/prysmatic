@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import {useKeenSlider} from 'keen-slider/react'
+import Image from 'next/image'
 import 'keen-slider/keen-slider.min.css'
 
 const slides = [
@@ -35,7 +36,7 @@ export default function AboutOurVision({...restProps}) {
         <div className="mx-auto max-w-[868px] rounded-large p-[20px] md:p-16 bg-cover bg-no-repeat bg-[url('/images/vision-gallery-bg.png')] dark:bg-none bg-white dark:bg-dark-500 grid grid-cols-[62px_1fr] gap-5 md:gap-[30px] text-left">
           <div className="flex">
             {loaded && instanceRef.current && (
-              <div className="relative grow before:content-[''] before:absolute before:top-0 before:h-full before:left-1/2 before:-translate-x-1/2 before:w-[1px] before:bg-dark-500 dark:before:bg-semi-white">
+              <div className="relative flex flex-col items-center justify-around grow before:content-[''] before:absolute before:top-0 before:h-full before:left-1/2 before:-translate-x-1/2 before:w-[1px] before:bg-dark-500 dark:before:bg-semi-white">
                 {[
                   ...Array(
                     instanceRef.current.track.details.slides.length,
@@ -47,10 +48,29 @@ export default function AboutOurVision({...restProps}) {
                       onClick={() => {
                         instanceRef.current?.moveToIdx(idx)
                       }}
-                      className={
-                        'dot' + (currentSlide === idx ? ' active' : '')
-                      }
-                    ></button>
+                      className={`${
+                        currentSlide === idx
+                          ? 'active'
+                          : 'rounded-full border border-dark-500 dark:border-semi-white'
+                      } relative w-[23px] h-[23px] flex items-center justify-center flex-shrink-0`}
+                    >
+                      {currentSlide === idx ? (
+                        <div className="w-[62px] flex-shrink-0">
+                          <Image
+                            src="/images/gallery-pagination.svg"
+                            alt="pagination"
+                            width={100}
+                            height={100}
+                            quality={100}
+                            layout="responsive"
+                            className="w-full"
+                            priority={true}
+                          />
+                        </div>
+                      ) : (
+                        <span className="rounded-full bg-dark-500 dark:bg-semi-white relative w-[13px] h-[13px]"></span>
+                      )}
+                    </button>
                   )
                 })}
               </div>
