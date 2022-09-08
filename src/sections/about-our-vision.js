@@ -32,7 +32,7 @@ export default function AboutOurVision({ ...restProps }) {
           Accelerate the world{'’'}s transition to sustainable economics
         </h2>
 
-        <div className="mx-auto max-w-[868px] rounded-large p-[20px] md:p-16 bg-cover bg-no-repeat bg-[url('/images/vision-gallery-bg.png')] bg-white dark:bg-dark-500 grid grid-cols-[62px_1fr] gap-5 md:gap-[30px] text-left">
+        <div className="mx-auto max-w-[868px] rounded-large p-[20px] md:p-16 bg-cover bg-no-repeat bg-[url('/images/vision-gallery-bg.png')] dark:bg-none bg-white dark:bg-dark-500 grid grid-cols-[62px_1fr] gap-5 md:gap-[30px] text-left">
           <div className="flex">
             {loaded && instanceRef.current && (
               <div className="relative grow before:content-[''] before:absolute before:top-0 before:h-full before:left-1/2 before:-translate-x-1/2 before:w-[1px] before:bg-dark-500 dark:before:bg-semi-white">
