@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import AboutOurMission from '../sections/about-our-mission'
 import AboutOurVision from '../sections/about-our-vision'
+import AboutMeetTeam from '../sections/about-meet-team'
+import PrysmTeamWork from '../sections/prysm-teamwork'
 
 export default function Home() {
   return (
@@ -15,8 +17,12 @@ export default function Home() {
 
       <AboutOurVision />
 
-      <section className="py-6 md:py-16 bg-body-gradien">
-        <div className="container"></div>
+      <section className="py-6 md:py-16 bg-body-gradient dark:bg-none">
+        <div className="container">
+          <AboutMeetTeam />
+
+          <PrysmTeamWork nested={true} />
+        </div>
       </section>
     </>
   )
