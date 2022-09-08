@@ -2,6 +2,8 @@ import {useState} from 'react'
 import {useKeenSlider} from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 
+// const galleryData =
+
 export default function AboutMeetTeam({...restProps}) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
@@ -71,16 +73,15 @@ export default function AboutMeetTeam({...restProps}) {
         A team of experts with in-depth understanding of blockchain technology
       </h2>
 
-      <div
-        ref={sliderRef}
-        className="keen-slider text-semi-white relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"
-      >
-        <div className="keen-slider__slide">1</div>
-        <div className="keen-slider__slide">2</div>
-        <div className="keen-slider__slide">3</div>
-        <div className="keen-slider__slide">4</div>
-        <div className="keen-slider__slide">5</div>
-        <div className="keen-slider__slide">6</div>
+      <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+        <div ref={sliderRef} className="keen-slider text-semi-white">
+          <div className="keen-slider__slide">1</div>
+          <div className="keen-slider__slide">2</div>
+          <div className="keen-slider__slide">3</div>
+          <div className="keen-slider__slide">4</div>
+          <div className="keen-slider__slide">5</div>
+          <div className="keen-slider__slide">6</div>
+        </div>
       </div>
     </div>
   )
