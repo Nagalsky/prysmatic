@@ -5,6 +5,7 @@ const headingFontFamily = '"Sora-SemiBold", sans-serif'
 const headingBoldFontFamily = '"Sora-Bold", sans-serif'
 const leadFontFamily = '"Sora-Regular", sans-serif'
 const subHeadingFontFamily = '"DM-Mono-Regular", sans-serif'
+const subHeadingMediumFontFamily = '"DM-Mono-Medium", sans-serif'
 
 module.exports = {
   mode: 'jit',
@@ -16,6 +17,7 @@ module.exports = {
       heading: headingFontFamily,
       'heading-bold': headingBoldFontFamily,
       subheading: subHeadingFontFamily,
+      'subheading-medium': subHeadingMediumFontFamily,
       lead: leadFontFamily,
     },
     container: {
@@ -42,15 +44,15 @@ module.exports = {
         'yellow-600': '#d2b343',
         'sky-500': '#75a8ff',
         'sky-600': '#8eb8ff',
+        'rose-400': '#fa6898',
         'rose-500': '#e35484',
         'red-500': '#e8002d',
+        'green-500': '#249775',
       },
       backgroundImage: {
         'body-gradient':
           'linear-gradient(to top, #484b4b 0%, #252a2b 53%, #1b2022 100%)',
         'footer-gradient': 'linear-gradient(113deg, #825aff 1%, #483681 92%)',
-        'team-card-gradient':
-          'linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(148deg, #d3cac0 1%, rgba(238, 232, 225, 0) 147%)',
       },
       borderRadius: {
         'rounded-xl': '10px',

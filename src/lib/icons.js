@@ -395,3 +395,139 @@ export function TwitterSocial({className}) {
     </svg>
   )
 }
+
+export function Shield({className}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
+      />
+    </svg>
+  )
+}
+
+export function ArrowsUpDown({className}) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 17 19"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        d="M3.88452 1.10596V17.7213"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M6.65394 3.87519L3.88471 1.10596L1.11548 3.87519"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M15.8847 14.9521L13.1154 17.7214L10.3462 14.9521"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M13.1155 17.7213V1.10596"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+export function Network({className}) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 51 46"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      strokeWidth={2}
+    >
+      <path
+        d="M7.27083 13.0909C10.1473 13.0909 12.4792 10.78 12.4792 7.92948C12.4792 5.07891 10.1473 2.76807 7.27083 2.76807C4.39435 2.76807 2.0625 5.07891 2.0625 7.92948C2.0625 10.78 4.39435 13.0909 7.27083 13.0909Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M25.4998 13.0909C28.3763 13.0909 30.7082 10.78 30.7082 7.92948C30.7082 5.07891 28.3763 2.76807 25.4998 2.76807C22.6234 2.76807 20.2915 5.07891 20.2915 7.92948C20.2915 10.78 22.6234 13.0909 25.4998 13.0909Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M43.7293 13.0909C46.6058 13.0909 48.9377 10.78 48.9377 7.92948C48.9377 5.07891 46.6058 2.76807 43.7293 2.76807C40.8528 2.76807 38.521 5.07891 38.521 7.92948C38.521 10.78 40.8528 13.0909 43.7293 13.0909Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7.27083 44.0591C10.1473 44.0591 12.4792 41.7483 12.4792 38.8977C12.4792 36.0472 10.1473 33.7363 7.27083 33.7363C4.39435 33.7363 2.0625 36.0472 2.0625 38.8977C2.0625 41.7483 4.39435 44.0591 7.27083 44.0591Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M25.4998 44.0591C28.3763 44.0591 30.7082 41.7483 30.7082 38.8977C30.7082 36.0472 28.3763 33.7363 25.4998 33.7363C22.6234 33.7363 20.2915 36.0472 20.2915 38.8977C20.2915 41.7483 22.6234 44.0591 25.4998 44.0591Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7.271 13.0908V33.7365"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M25.5 13.0908V33.7365"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M43.7293 13.0908V18.2522C43.7293 19.6211 43.1806 20.9339 42.2038 21.9019C41.2271 22.8699 39.9023 23.4136 38.521 23.4136H7.271"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+export function Code({className}) {
+  return (
+    <svg
+      className={className}
+      width="41"
+      height="39"
+      viewBox="0 0 41 39"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      strokeWidth={2}
+    >
+      <path
+        d="M10.3149 11.2656L2.16675 19.4138L10.3149 27.5619"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M30.6853 11.2656L38.8335 19.4138L30.6853 27.5619"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M24.5739 3.11768L16.4258 35.7103"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
