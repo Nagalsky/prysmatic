@@ -155,8 +155,11 @@ const AboutMeetTeam = forwardRef((props, ref) => {
   )
 
   return (
-    <div className="text-center" ref={ref} {...props}>
-      <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px] leading-[1.25]">
+    <div className="text-center" {...props}>
+      <h3
+        className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px] leading-[1.25]"
+        ref={ref}
+      >
         MEET THE TEAM
       </h3>
 
