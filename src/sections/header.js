@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
 import {useTheme} from 'next-themes'
@@ -11,23 +11,25 @@ import {
   MobileMenuClose,
 } from '../lib/icons'
 import {HeaderLogo} from '../components/header-logo'
+import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock'
 
 export default function Header({...restProps}) {
   const router = useRouter()
+  const scrollLockRef = useRef(null)
 
   const [isOpened, setIsOpened] = useState(false)
 
   const {systemTheme, theme, setTheme} = useTheme()
   const [mounted, setMounted] = useState(false)
 
-  const toggleMobileMenu = () => {
+  const openMobileMenu = () => {
     setIsOpened(!isOpened)
-    document.body.classList.toggle('overflow-hidden')
+    disableBodyScroll(scrollLockRef)
   }
 
-  const switchRoutes = () => {
+  const closeMobileMenu = () => {
     setIsOpened(false)
-    document.body.classList.remove('overflow-hidden')
+    enableBodyScroll(scrollLockRef)
   }
 
   useEffect(() => {
@@ -67,7 +69,7 @@ export default function Header({...restProps}) {
             <div className="flex">{renderThemeChanger()}</div>
 
             <button
-              onClick={toggleMobileMenu}
+              onClick={() => (isOpened ? closeMobileMenu() : openMobileMenu())}
               type="button"
               className="inline-flex items-center justify-center rounded-full border border-yellow-600 bg-yellow-500 w-8 h-8 text-dark-500"
             >
@@ -87,7 +89,7 @@ export default function Header({...restProps}) {
             <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 xl:gap-8 xxl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center grow">
               <Link href="/">
                 <a
-                  onClick={switchRoutes}
+                  onClick={closeMobileMenu}
                   className={`${
                     router.pathname === '/'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -100,7 +102,7 @@ export default function Header({...restProps}) {
               </Link>
               <Link href="/about">
                 <a
-                  onClick={switchRoutes}
+                  onClick={closeMobileMenu}
                   className={`${
                     router.pathname === '/about'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -113,7 +115,7 @@ export default function Header({...restProps}) {
               </Link>
               <Link href="/careers">
                 <a
-                  onClick={switchRoutes}
+                  onClick={closeMobileMenu}
                   className={`${
                     router.pathname === '/careers'
                       ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
@@ -129,7 +131,7 @@ export default function Header({...restProps}) {
                 target="_blank"
                 href="https://github.com/"
                 rel="noopener noreferrer"
-                onClick={switchRoutes}
+                onClick={closeMobileMenu}
               >
                 Docs
                 <ArrowRight className="w-8 h-8 lg:hidden" />
@@ -154,7 +156,8 @@ export default function Header({...restProps}) {
       {isOpened && (
         <div
           className="fixed h-full w-full left-0 top-0 bg-dark-500/50 z-30 lg:hidden"
-          onClick={toggleMobileMenu}
+          onClick={openMobileMenu}
+          ref={scrollLockRef}
         ></div>
       )}
     </>
