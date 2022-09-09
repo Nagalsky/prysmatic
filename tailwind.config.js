@@ -8,12 +8,7 @@ const subHeadingFontFamily = '"DM-Mono-Regular", sans-serif'
 
 module.exports = {
   mode: 'jit',
-  content: ['./src/**/*.{js,ts,jsx,tsx,html,css}'],
-  // content: [
-  //   './src/pages/**/*.{js,ts,jsx,tsx}',
-  //   './src/sections/**/*.{js,ts,jsx,tsx}',
-  //   './src/components/**/*.{js,ts,jsx,tsx}',
-  // ],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     fontFamily: {
