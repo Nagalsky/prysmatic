@@ -46,11 +46,14 @@ module.exports = {
         'sky-500': '#75a8ff',
         'sky-600': '#8eb8ff',
         'rose-500': '#e35484',
+        'red-500': '#e8002d',
       },
       backgroundImage: {
         'body-gradient':
           'linear-gradient(to top, #484b4b 0%, #252a2b 53%, #1b2022 100%)',
         'footer-gradient': 'linear-gradient(113deg, #825aff 1%, #483681 92%)',
+        'team-card-gradient':
+          'linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(148deg, #d3cac0 1%, rgba(238, 232, 225, 0) 147%)',
       },
       borderRadius: {
         'rounded-xl': '10px',

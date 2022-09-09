@@ -1,7 +1,8 @@
 import {useState} from 'react'
 import Image from 'next/image'
 import {useKeenSlider} from 'keen-slider/react'
-import {ArrowLeft, ArrowRight} from '../lib/icons'
+import {GalleryControls} from '../components/gallery-controls'
+import {GalleryPagination} from '../components/gallery-pagination'
 
 import 'keen-slider/keen-slider.min.css'
 
@@ -114,22 +115,23 @@ export default function PrysmSponsors({...restProps}) {
           {loaded && instanceRef.current && (
             <>
               <div className="hidden md:flex items-center justify-center gap-10 absolute left-0 w-full bottom-[5%] z-20 [&>*]:cursor-pointer [&>*]:rounded-full [&>*]:w-8 [&>*]:h-8 [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:text-semi-white [&>*]:dark:text-dark-500 [&>*]:bg-purple-500 [&>*]:dark:bg-yellow-500 [&>*]:transition">
-                <div
+                <GalleryControls
+                  className="hover:bg-purple-600 dark:hover:bg-yellow-600"
+                  iconSize="w-5 h-5"
+                  left
                   onClick={(e) =>
                     e.stopPropagation() || instanceRef.current?.prev()
                   }
+                />
+
+                <GalleryControls
                   className="hover:bg-purple-600 dark:hover:bg-yellow-600"
-                >
-                  <ArrowLeft className="w-5 h-5" />
-                </div>
-                <div
+                  iconSize="w-5 h-5"
+                  right
                   onClick={(e) =>
                     e.stopPropagation() || instanceRef.current?.next()
                   }
-                  className="hover:bg-purple-600 dark:hover:bg-yellow-600"
-                >
-                  <ArrowRight className="w-5 h-5" />
-                </div>
+                />
               </div>
             </>
           )}
@@ -142,18 +144,14 @@ export default function PrysmSponsors({...restProps}) {
                 ).keys(),
               ].map((idx) => {
                 return (
-                  <button
+                  <GalleryPagination
                     key={idx}
                     onClick={() => {
                       instanceRef.current?.moveToIdx(idx)
                     }}
-                    className={
-                      'rounded-md h-2 bg-purple-500 dark:bg-yellow-500 transition origin-center' +
-                      (currentSlide === idx
-                        ? ' opacity-1 w-6'
-                        : ' opacity-[0.4] w-4')
-                    }
-                  ></button>
+                    currentSlide={currentSlide}
+                    idx={idx}
+                  />
                 )
               })}
             </div>
