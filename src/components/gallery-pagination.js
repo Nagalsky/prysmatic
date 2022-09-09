@@ -4,5 +4,5 @@ export function GalleryPagination({
   idx,
   ...restProps
 }) {
-  return <button {...restProps} className={className}></button>
+  return <button className={className} {...restProps}></button>
 }
