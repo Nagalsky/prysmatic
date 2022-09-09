@@ -16,19 +16,21 @@ export default function Home() {
   const currentSection = router.query['section'] || null
 
   useLayoutEffect(() => {
-    switch (currentSection) {
-      case 'mission':
-        missionRef.current?.scrollIntoView({behavior: 'smooth'})
-        break
-      case 'vision':
-        visionRef.current?.scrollIntoView({behavior: 'smooth'})
-        break
-      case 'team':
-        teamRef.current?.scrollIntoView({behavior: 'smooth'})
-        break
-      default:
-        null
-    }
+    setTimeout(() => {
+      switch (currentSection) {
+        case 'mission':
+          missionRef.current?.scrollIntoView({behavior: 'smooth'})
+          break
+        case 'vision':
+          visionRef.current?.scrollIntoView({behavior: 'smooth'})
+          break
+        case 'team':
+          teamRef.current?.scrollIntoView({behavior: 'smooth'})
+          break
+        default:
+          null
+      }
+    }, 10)
   }, [router, currentSection])
 
   return (
