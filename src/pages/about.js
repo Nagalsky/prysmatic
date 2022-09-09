@@ -29,7 +29,7 @@ export default function Home() {
       default:
         null
     }
-  }, [router])
+  }, [router, currentSection])
 
   return (
     <>
