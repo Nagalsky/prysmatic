@@ -22,7 +22,7 @@ const slides = [
 export default function PrysmSponsors({...restProps}) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
-  const [sliderRef, instanceRef] = useKeenSlider(
+  const [sliderRef, instancePrysmSponsorsRef] = useKeenSlider(
     {
       initial: 0,
       slides: {
@@ -112,7 +112,7 @@ export default function PrysmSponsors({...restProps}) {
             })}
           </div>
 
-          {loaded && instanceRef.current && (
+          {loaded && instancePrysmSponsorsRef.current && (
             <>
               <div className="hidden md:flex items-center justify-center gap-10 absolute left-0 w-full bottom-[5%] z-20 [&>*]:cursor-pointer [&>*]:rounded-full [&>*]:w-8 [&>*]:h-8 [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:text-semi-white [&>*]:dark:text-dark-500 [&>*]:bg-purple-500 [&>*]:dark:bg-yellow-500 [&>*]:transition">
                 <GalleryControls
@@ -120,7 +120,8 @@ export default function PrysmSponsors({...restProps}) {
                   iconSize="w-5 h-5"
                   left
                   onClick={(e) =>
-                    e.stopPropagation() || instanceRef.current?.prev()
+                    e.stopPropagation() ||
+                    instancePrysmSponsorsRef.current?.prev()
                   }
                 />
 
@@ -129,25 +130,26 @@ export default function PrysmSponsors({...restProps}) {
                   iconSize="w-5 h-5"
                   right
                   onClick={(e) =>
-                    e.stopPropagation() || instanceRef.current?.next()
+                    e.stopPropagation() ||
+                    instancePrysmSponsorsRef.current?.next()
                   }
                 />
               </div>
             </>
           )}
 
-          {loaded && instanceRef.current && (
+          {loaded && instancePrysmSponsorsRef.current && (
             <div className="flex items-center justify-center flex-wrap gap-2 md:hidden">
               {[
                 ...Array(
-                  instanceRef.current.track.details.slides.length,
+                  instancePrysmSponsorsRef.current.track.details.slides.length,
                 ).keys(),
               ].map((idx) => {
                 return (
                   <GalleryPagination
                     key={idx}
                     onClick={() => {
-                      instanceRef.current?.moveToIdx(idx)
+                      instancePrysmSponsorsRef.current?.moveToIdx(idx)
                     }}
                     currentSlide={currentSlide}
                     idx={idx}

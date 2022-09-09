@@ -61,7 +61,7 @@ export default function Header({...restProps}) {
         {...restProps}
       >
         <div className="px-4 lg:px-8 xl:px-16 flex items-center gap-4 lg:gap-16 xxl:gap-[268px]">
-          {/* <Link href="/">
+          <Link href="/">
             <a className="block w-[130px] md:w-[200px] shrink-0">
               <svg
                 width="100%"
@@ -108,9 +108,9 @@ export default function Header({...restProps}) {
                 </g>
               </svg>
             </a>
-          </Link> */}
+          </Link>
 
-          <HeaderLogo />
+          {/* <HeaderLogo /> */}
 
           <div className="flex gap-6 items-center lg:hidden ml-auto">
             <div className="flex">{renderThemeChanger()}</div>

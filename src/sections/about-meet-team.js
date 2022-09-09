@@ -93,7 +93,7 @@ const galleryData = [
 export default function AboutMeetTeam({...restProps}) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
-  const [sliderRef, instanceRef] = useKeenSlider(
+  const [sliderRef, instanceMeetTeamRef] = useKeenSlider(
     {
       mode: 'free-snap',
       slides: {
@@ -136,7 +136,7 @@ export default function AboutMeetTeam({...restProps}) {
           clearTimeout(timeout)
           timeout = setTimeout(() => {
             slider.next()
-          }, 3000)
+          }, 300000)
         }
         slider.on('created', () => {
           slider.container.addEventListener('mouseover', () => {
@@ -216,7 +216,7 @@ export default function AboutMeetTeam({...restProps}) {
           })}
         </div>
 
-        {loaded && instanceRef.current && (
+        {loaded && instanceMeetTeamRef.current && (
           <>
             <div className="hidden md:flex items-center justify-center gap-10 mt-16 [&>*]:cursor-pointer [&>*]:rounded-full [&>*]:w-8 [&>*]:h-8 [&>*]:flex [&>*]:items-center [&>*]:justify-center [&>*]:text-semi-white [&>*]:dark:text-dark-500 [&>*]:bg-purple-500 [&>*]:dark:bg-yellow-500 [&>*]:transition">
               <GalleryControls
@@ -224,7 +224,7 @@ export default function AboutMeetTeam({...restProps}) {
                 iconSize="w-5 h-5"
                 left
                 onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.prev()
+                  e.stopPropagation() || instanceMeetTeamRef.current?.prev()
                 }
               />
 
@@ -233,23 +233,25 @@ export default function AboutMeetTeam({...restProps}) {
                 iconSize="w-5 h-5"
                 right
                 onClick={(e) =>
-                  e.stopPropagation() || instanceRef.current?.next()
+                  e.stopPropagation() || instanceMeetTeamRef.current?.next()
                 }
               />
             </div>
           </>
         )}
 
-        {loaded && instanceRef.current && (
-          <div className="flex items-center justify-center flex-wrap gap-2 md:hidden mt-10">
+        {loaded && instanceMeetTeamRef.current && (
+          <div className="flex items-center justify-center flex-wrap gap-2 mt-10 md:hidden">
             {[
-              ...Array(instanceRef.current.track.details.slides.length).keys(),
+              ...Array(
+                instanceMeetTeamRef.current.track.details.slides.length,
+              ).keys(),
             ].map((idx) => {
               return (
                 <GalleryPagination
                   key={idx}
                   onClick={() => {
-                    instanceRef.current?.moveToIdx(idx)
+                    instanceMeetTeamRef.current?.moveToIdx(idx)
                   }}
                   currentSlide={currentSlide}
                   idx={idx}

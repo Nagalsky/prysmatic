@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export function HeaderLogo({...restProps}) {
   return (
-    <Link href="/">
+    <Link href="/" {...restProps}>
       <a className="block w-[130px] md:w-[200px] shrink-0">
         <svg
           width="100%"
