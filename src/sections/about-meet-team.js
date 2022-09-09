@@ -2,7 +2,48 @@ import {useState} from 'react'
 import {useKeenSlider} from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 
-// const galleryData =
+const galleryData = [
+  {
+    id: 1,
+    name: 'Preston Van Loon',
+    role: 'co-founder',
+    about:
+      'Senior Go Engineer. Formerly Software Engineer at Google. JavaScript / Typescript, Node.js, Java, distributed systems design, and systems architecture. Formally trained tech interviewer from Amazon and Google.',
+    twitterUrl: 'https://twitter.com/',
+    gitHubUrl: 'https://github.com/',
+    avatarUrl: 'https://via.placeholder.com/150',
+  },
+  {
+    id: 2,
+    name: 'Raul Jordan',
+    role: 'co-founder',
+    about:
+      'Senior Go Engineer, Systems Architecture, and Ethereum protocol development. Thiel Fellow, computer science at Harvard University.',
+    twitterUrl: 'https://twitter.com/',
+    gitHubUrl: 'https://github.com/',
+    avatarUrl: 'https://via.placeholder.com/150',
+  },
+  {
+    id: 3,
+    name: 'Terence Tsao',
+    role: 'SENIOR GO ENGINEER',
+    about:
+      '#1 external contributor to Ethereum research specification. Software engineer at Riverbed and Cisco.',
+    twitterUrl: 'https://twitter.com/',
+    gitHubUrl: 'https://github.com/',
+    avatarUrl: 'https://via.placeholder.com/150',
+  },
+  {
+    id: 4,
+    name: 'Nishant Das',
+    role: 'SENIOR GO ENGINEER',
+    about:
+      'P2P networking specialist. Best bug hunter in Ethereum core development Experience in quantitative finance.',
+    twitterUrl: 'https://twitter.com/',
+    gitHubUrl: 'https://github.com/',
+    avatarUrl: 'https://via.placeholder.com/150',
+  },
+]
 
 export default function AboutMeetTeam({...restProps}) {
   const [currentSlide, setCurrentSlide] = useState(0)
