@@ -130,4 +130,6 @@ const AboutOurMission = forwardRef((props, ref) => (
   </section>
 ))
 
+AboutOurMission.displayName = 'AboutOurMission'
+
 export default AboutOurMission

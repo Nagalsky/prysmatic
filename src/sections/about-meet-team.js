@@ -263,4 +263,6 @@ const AboutMeetTeam = forwardRef((props, ref) => {
   )
 })
 
+AboutMeetTeam.displayName = 'AboutMeetTeam'
+
 export default AboutMeetTeam

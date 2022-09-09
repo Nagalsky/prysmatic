@@ -1,4 +1,4 @@
-import {useRef, useLayoutEffect} from 'react'
+import {useRef, useEffect} from 'react'
 import Head from 'next/head'
 import {useRouter} from 'next/router'
 import AboutOurMission from '../sections/about-our-mission'
@@ -15,7 +15,7 @@ export default function Home() {
 
   const currentSection = router.query['section'] || null
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     switch (currentSection) {
       case 'mission':
         missionRef.current?.scrollIntoView({behavior: 'smooth'})

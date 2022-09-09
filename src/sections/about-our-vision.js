@@ -125,4 +125,6 @@ const AboutOurVision = forwardRef((props, ref) => {
   )
 })
 
+AboutOurVision.displayName = 'AboutOurVision'
+
 export default AboutOurVision
