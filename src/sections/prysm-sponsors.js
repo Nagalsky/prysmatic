@@ -135,28 +135,27 @@ export default function PrysmSponsors({...restProps}) {
                   }
                 />
               </div>
-            </>
-          )}
 
-          {loaded && instancePrysmSponsorsRef.current && (
-            <div className="flex items-center justify-center flex-wrap gap-2 md:hidden">
-              {[
-                ...Array(
-                  instancePrysmSponsorsRef.current.track.details.slides.length,
-                ).keys(),
-              ].map((idx) => {
-                return (
-                  <GalleryPagination
-                    key={idx}
-                    onClick={() => {
-                      instancePrysmSponsorsRef.current?.moveToIdx(idx)
-                    }}
-                    currentSlide={currentSlide}
-                    idx={idx}
-                  />
-                )
-              })}
-            </div>
+              <div className="flex items-center justify-center flex-wrap gap-2 md:hidden">
+                {[
+                  ...Array(
+                    instancePrysmSponsorsRef.current.track.details.slides
+                      .length,
+                  ).keys(),
+                ].map((idx) => {
+                  return (
+                    <GalleryPagination
+                      key={idx}
+                      onClick={() => {
+                        instancePrysmSponsorsRef.current?.moveToIdx(idx)
+                      }}
+                      currentSlide={currentSlide}
+                      idx={idx}
+                    />
+                  )
+                })}
+              </div>
+            </>
           )}
         </div>
       </div>

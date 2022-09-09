@@ -237,28 +237,26 @@ export default function AboutMeetTeam({...restProps}) {
                 }
               />
             </div>
-          </>
-        )}
 
-        {loaded && instanceMeetTeamRef.current && (
-          <div className="flex items-center justify-center flex-wrap gap-2 mt-10 md:hidden">
-            {[
-              ...Array(
-                instanceMeetTeamRef.current.track.details.slides.length,
-              ).keys(),
-            ].map((idx) => {
-              return (
-                <GalleryPagination
-                  key={idx}
-                  onClick={() => {
-                    instanceMeetTeamRef.current?.moveToIdx(idx)
-                  }}
-                  currentSlide={currentSlide}
-                  idx={idx}
-                />
-              )
-            })}
-          </div>
+            <div className="flex items-center justify-center flex-wrap gap-2 mt-10 md:hidden">
+              {[
+                ...Array(
+                  instanceMeetTeamRef.current.track.details.slides.length,
+                ).keys(),
+              ].map((idx) => {
+                return (
+                  <GalleryPagination
+                    key={idx}
+                    onClick={() => {
+                      instanceMeetTeamRef.current?.moveToIdx(idx)
+                    }}
+                    currentSlide={currentSlide}
+                    idx={idx}
+                  />
+                )
+              })}
+            </div>
+          </>
         )}
       </div>
     </div>
