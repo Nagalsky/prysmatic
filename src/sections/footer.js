@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
-import { FooterLogo } from '../components/footer-logo'
-import { TwitterCircle, DiscordCircle, GitHubCircle } from '../lib/icons'
+import {FooterLogo} from '../components/footer-logo'
+import {TwitterCircle, DiscordCircle, GitHubCircle} from '../lib/icons'
 
-export default function Footer({ ...restProps }) {
+export default function Footer({...restProps}) {
   return (
     <footer
       className="bg-footer-gradient text-semi-white py-[20px] md:py-8 shrink-0"
@@ -58,13 +58,34 @@ export default function Footer({ ...restProps }) {
               </h3>
 
               <div className="grid gap-[10px] [&>*]:py-4 [&>*]:transition">
-                <Link href="/">
+                <Link
+                  href={{
+                    pathname: '/about',
+                    query: {
+                      section: 'mission',
+                    },
+                  }}
+                >
                   <a className="hover:text-white">Our Mission</a>
                 </Link>
-                <Link href="/">
+                <Link
+                  href={{
+                    pathname: '/about',
+                    query: {
+                      section: 'vision',
+                    },
+                  }}
+                >
                   <a className="hover:text-white">Our Vision</a>
                 </Link>
-                <Link href="/">
+                <Link
+                  href={{
+                    pathname: '/about',
+                    query: {
+                      section: 'team',
+                    },
+                  }}
+                >
                   <a className="hover:text-white">Meet the Team</a>
                 </Link>
               </div>

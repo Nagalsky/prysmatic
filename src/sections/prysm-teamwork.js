@@ -29,7 +29,7 @@ export default function PrysmTeamWork({isNested, ...restProps}) {
             <h3
               className={`${
                 !isNested ? 'text-purple-600 dark:text-sky-600' : ''
-              } uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 tracking-[1.08px]`}
+              } uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 tracking-[1.08px] leading-[1.25]`}
             >
               THE BEST OF TEAMWORK
             </h3>

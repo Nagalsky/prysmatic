@@ -1,10 +1,38 @@
+import {useRef, useLayoutEffect} from 'react'
 import Head from 'next/head'
+import {useRouter} from 'next/router'
 import AboutOurMission from '../sections/about-our-mission'
 import AboutOurVision from '../sections/about-our-vision'
 import AboutMeetTeam from '../sections/about-meet-team'
 import PrysmTeamWork from '../sections/prysm-teamwork'
 
 export default function Home() {
+  const missionRef = useRef(null)
+  const visionRef = useRef(null)
+  const teamRef = useRef(null)
+
+  const router = useRouter()
+
+  let currentSection = router.query['section'] || null
+
+  useLayoutEffect(() => {
+    switch (currentSection) {
+      case 'mission':
+        missionRef.current?.scrollIntoView({behavior: 'smooth'})
+        break
+      case 'vision':
+        visionRef.current?.scrollIntoView({behavior: 'smooth'})
+        break
+      case 'team':
+        teamRef.current?.scrollIntoView({behavior: 'smooth'})
+        break
+      default:
+        null
+    }
+
+    router.replace(router.pathname, undefined, {shallow: true})
+  }, [currentSection])
+
   return (
     <>
       <Head>
@@ -13,13 +41,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <AboutOurMission />
+      <AboutOurMission ref={missionRef} />
 
-      <AboutOurVision />
+      <AboutOurVision ref={visionRef} />
 
       <section className="py-6 md:py-16 bg-body-gradient dark:bg-none overflow-x-hidden overflow-y-auto">
         <div className="container">
-          <AboutMeetTeam />
+          <AboutMeetTeam ref={teamRef} />
 
           <PrysmTeamWork isNested />
         </div>

@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, forwardRef} from 'react'
 import {useKeenSlider} from 'keen-slider/react'
 import Image from 'next/image'
 import {TwitterSocial, GitHubSocial} from '../lib/icons'
@@ -90,7 +90,7 @@ const galleryData = [
   },
 ]
 
-export default function AboutMeetTeam({...restProps}) {
+const AboutMeetTeam = forwardRef((props, ref) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceMeetTeamRef] = useKeenSlider(
@@ -136,7 +136,7 @@ export default function AboutMeetTeam({...restProps}) {
           clearTimeout(timeout)
           timeout = setTimeout(() => {
             slider.next()
-          }, 300000)
+          }, 3000)
         }
         slider.on('created', () => {
           slider.container.addEventListener('mouseover', () => {
@@ -155,8 +155,8 @@ export default function AboutMeetTeam({...restProps}) {
   )
 
   return (
-    <div className="text-center" {...restProps}>
-      <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px]">
+    <div className="text-center" ref={ref} {...props}>
+      <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px] leading-[1.25]">
         MEET THE TEAM
       </h3>
 
@@ -252,11 +252,6 @@ export default function AboutMeetTeam({...restProps}) {
                     }}
                     currentSlide={currentSlide}
                     idx={idx}
-                    className={`${
-                      currentSlide === idx
-                        ? ' opacity-1 w-6'
-                        : ' opacity-[0.4] w-4'
-                    } rounded-md h-2 bg-purple-500 dark:bg-yellow-500 transition origin-center`}
                   />
                 )
               })}
@@ -266,4 +261,6 @@ export default function AboutMeetTeam({...restProps}) {
       </div>
     </div>
   )
-}
+})
+
+export default AboutMeetTeam

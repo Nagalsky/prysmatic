@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, forwardRef} from 'react'
 import {useKeenSlider} from 'keen-slider/react'
 import Image from 'next/image'
 import 'keen-slider/keen-slider.min.css'
@@ -9,7 +9,7 @@ const slides = [
   'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.',
 ]
 
-export default function AboutOurVision({...restProps}) {
+const AboutOurVision = forwardRef((props, ref) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceRef] = useKeenSlider(
@@ -51,9 +51,12 @@ export default function AboutOurVision({...restProps}) {
   )
 
   return (
-    <section className="py-6 md:py-16 text-center" {...restProps}>
+    <section className="py-6 md:py-16 text-center" {...props}>
       <div className="container">
-        <h3 className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-purple-600 dark:text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px]">
+        <h3
+          className="uppercase font-subheading text-[20px] md:text-[26px] lg:text-[36px] text-purple-600 dark:text-sky-600 mb-[20px] md:mb-[40px] tracking-[1.08px] leading-[1.25]"
+          ref={ref}
+        >
           OUR VISION
         </h3>
 
@@ -120,4 +123,6 @@ export default function AboutOurVision({...restProps}) {
       </div>
     </section>
   )
-}
+})
+
+export default AboutOurVision
