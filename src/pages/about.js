@@ -13,7 +13,7 @@ export default function Home() {
 
   const router = useRouter()
 
-  let currentSection = router.query['section'] || null
+  const currentSection = router.query['section'] || null
 
   useLayoutEffect(() => {
     switch (currentSection) {
@@ -29,9 +29,7 @@ export default function Home() {
       default:
         null
     }
-
-    router.replace(router.pathname, undefined, {shallow: true})
-  }, [currentSection])
+  }, [router])
 
   return (
     <>
