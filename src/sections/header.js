@@ -11,7 +11,6 @@ import {
   MobileMenuClose,
 } from '../lib/icons'
 import {HeaderLogo} from '../components/header-logo'
-import {HeaderMenuMask} from '../components/header-menu-mask'
 
 export default function Header({...restProps}) {
   const router = useRouter()
@@ -23,10 +22,12 @@ export default function Header({...restProps}) {
 
   const toggleMobileMenu = () => {
     setIsOpened(!isOpened)
+    document.body.classList.toggle('overflow-hidden')
   }
 
   const switchRoutes = () => {
     setIsOpened(false)
+    document.body.classList.remove('overflow-hidden')
   }
 
   useEffect(() => {
@@ -150,7 +151,12 @@ export default function Header({...restProps}) {
         </div>
       </header>
 
-      {isOpened && <HeaderMenuMask onClick={toggleMobileMenu} />}
+      {isOpened && (
+        <div
+          className="fixed h-full w-full left-0 top-0 bg-dark-500/50 z-30 lg:hidden"
+          onClick={toggleMobileMenu}
+        ></div>
+      )}
     </>
   )
 }
