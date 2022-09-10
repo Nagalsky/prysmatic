@@ -47,10 +47,6 @@
     font-display: swap;
 }
 
-
-
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
