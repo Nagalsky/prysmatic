@@ -95,7 +95,6 @@ const AboutMeetTeam = forwardRef((props, ref) => {
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceMeetTeamRef] = useKeenSlider(
     {
-      // initial: 2,
       mode: 'free-snap',
       slides: {
         origin: 'center',
@@ -137,7 +136,7 @@ const AboutMeetTeam = forwardRef((props, ref) => {
           clearTimeout(timeout)
           timeout = setTimeout(() => {
             slider.next()
-          }, 300000)
+          }, 3000)
         }
         slider.on('created', () => {
           slider.container.addEventListener('mouseover', () => {
@@ -242,7 +241,7 @@ const AboutMeetTeam = forwardRef((props, ref) => {
               />
             </div>
 
-            <div className="flex items-center justify-center flex-wrap gap-2 mt-10">
+            <div className="flex items-center justify-center flex-wrap gap-2 mt-10 lg:hidden">
               {[
                 ...Array(
                   instanceMeetTeamRef.current.track.details.slides.length,

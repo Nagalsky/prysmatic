@@ -5,12 +5,13 @@ export function GalleryControls({
   iconSize,
   left,
   right,
+  disabled,
   ...restProps
 }) {
   return (
-    <div className={className} {...restProps}>
+    <button className={className} disabled={disabled} {...restProps}>
       {left && <ArrowLeft className={iconSize} />}
       {right && <ArrowRight className={iconSize} />}
-    </div>
+    </button>
   )
 }
