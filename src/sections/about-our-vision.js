@@ -81,7 +81,7 @@ const AboutOurVision = forwardRef((props, ref) => {
                       }}
                       className={`${
                         currentSlide === idx
-                          ? 'active'
+                          ? ''
                           : 'rounded-full border border-dark-500 dark:border-semi-white'
                       } relative w-[23px] h-[23px] flex items-center justify-center flex-shrink-0`}
                     >
