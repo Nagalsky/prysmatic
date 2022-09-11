@@ -62,7 +62,7 @@ export default function Header({...restProps}) {
         className="bg-semi-white dark:bg-dark-500 text-dark-500 dark:text-semi-white text-base font-heading shadow-[0_4px_4px_0_rgba(0,0,0,0.05)] dark:shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] py-[20px] lg:py-[26px] relative shrink-0 z-50"
         {...restProps}
       >
-        <div className="px-4 lg:px-8 xl:px-16 flex items-center gap-4 lg:gap-16 xxl:gap-[268px]">
+        <div className="px-4 lg:px-8 xl:px-16 flex items-center gap-4 lg:gap-16 2xl:gap-[268px]">
           <HeaderLogo />
 
           <div className="flex gap-6 items-center lg:hidden ml-auto">
@@ -86,7 +86,7 @@ export default function Header({...restProps}) {
               isOpened ? 'flex' : 'hidden'
             } grow flex-col items-start lg:flex lg:flex-row lg:items-center lg:justify-end absolute lg:static top-full bg-semi-white dark:bg-body-gradient lg:bg-transparent lg:dark:bg-none lg:dark:bg-transparent w-full lg:w-auto z-[50] left-0 p-[20px] lg:p-0 max-h-[calc(100vh_-_72px)] overflow-auto shadow-[0_4px_4px_0_rgba(0,0,0,0.05)_inset] dark:shadow-[0_4px_4px_0_rgba(0,0,0,0.25)_inset] lg:shadow-none dark:lg:shadow-none`}
           >
-            <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 xl:gap-8 xxl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center grow">
+            <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 xl:gap-8 2xl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center grow">
               <Link href="/">
                 <a
                   onClick={closeMobileMenu}

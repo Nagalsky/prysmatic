@@ -1,4 +1,4 @@
-import {useEffect, useState, useCallback} from 'react'
+import {useEffect, useState} from 'react'
 import Image from 'next/image'
 import {ArrowRight, GitHub} from '../lib/icons'
 
@@ -10,50 +10,48 @@ export default function PrysmHero({...restProps}) {
     '/images/animated-logo-4.svg',
   ]
 
-  // const [activeLogo, setActiveLogo] = useState(0)
+  const [activeLogo, setActiveLogo] = useState(0)
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setActiveLogo(activeLogo + 1)
-  //     if (activeLogo === animatedLogos.length - 1) {
-  //       setActiveLogo(0)
-  //     }
-
-  //     console.log('activeLogo', activeLogo)
-  //   }, 1000)
-  //   return () => clearInterval(interval)
-  // }, [activeLogo, animatedLogos.length])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveLogo(activeLogo + 1)
+      if (activeLogo === animatedLogos.length - 1) {
+        setActiveLogo(0)
+      }
+    }, 1600)
+    return () => clearInterval(interval)
+  }, [activeLogo, animatedLogos.length])
 
   return (
     <section
-      className="pt-[20px] pb-[52px] sm:pt-[40px] md:pt-[60px] lg:pt-[120px] xl:pt-[200px] md:pb-[60px] lg:pb-[110px] relative text-center md:text-start"
+      className="pt-[20px] pb-[52px] sm:pt-[40px] md:pt-[60px] lg:pt-[120px] xl:pt-[200px] md:pb-[60px] lg:pb-[110px] relative text-center md:text-start overflow-x-hidden"
       {...restProps}
     >
-      <div className="mb-[20px] md:m-0 md:absolute md:w-[48%] md:right-0 md:bottom-0 md:max-w-[710px] hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0">
-        <Image
-          src="/images/index-hero-banners.png"
-          alt="hero-banners"
-          width={100}
-          height={100}
-          quality={100}
-          layout="responsive"
-          priority={true}
-        />
-        <div className="absolute top-0 right-0">
+      <div className="container relative z-10 grid xl:grid-cols-[660px_1fr] lg:items-center gap-5 xl:gap-20">
+        <div className="relative hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0 xl:scale-[1.2] xl:translate-x-[60px] 2xl:scale-100 2xl:translate-x-0 xl:order-last -mx-[15px] sm:mx-auto sm:w-[400px] md:w-full">
           <Image
-            src={animatedLogos[0]}
+            src="/images/index-hero-banners.png"
             alt="hero-banners"
-            width={100}
-            height={100}
+            width={419}
+            height={390}
             quality={100}
             layout="responsive"
             priority={true}
           />
+          <div className="absolute ml-[2.5%] sm:ml-0 top-[24%] sm:top-[90px] md:top-[167px] lg:top-[199px] xl:top-[98px] 2xl:top-[144px] left-[50%] sm:left-[142px] md:left-[263px] lg:left-[313px] xl:left-[153px] 2xl:left-[225px] w-[34%] sm:w-[136px] md:w-[249px] lg:w-[297px] xl:w-[144px] 2xl:w-[211px] sm:h-[245px] z-10 -translate-x-1/2 sm:translate-x-0">
+            <Image
+              src={animatedLogos[activeLogo]}
+              alt="hero-banners"
+              width={100}
+              height={100}
+              quality={100}
+              layout="responsive"
+              priority={true}
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="container relative z-10">
-        <div className="md:max-w-[660px]">
+        <div className="md:max-w-[660px] xl:order-first">
           <h1 className="font-heading text-[40px] sm:text-[50px] lg:text-[65px] xl:text-[70px] mb-[20px] md:mb-[40px] leading-none">
             Prysm
           </h1>

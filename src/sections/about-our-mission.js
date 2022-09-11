@@ -16,7 +16,7 @@ const AboutOurMission = forwardRef((props, ref) => (
         Empower people to participate in the promise of Ethereum
       </h1>
 
-      <div className="grid md:grid-cols-3 gap-8 xl:gap-16 xxl:gap-[110px] items-start">
+      <div className="grid md:grid-cols-3 gap-8 xl:gap-16 2xl:gap-[110px] items-start">
         <div className="flex flex-col justify-center gap-5">
           <div className="w-[90px] lg:w-[150px] mx-auto">
             <Image
@@ -74,7 +74,7 @@ const AboutOurMission = forwardRef((props, ref) => (
 
       <div className="my-8 md:my-16 border-t-[3px] border-dashed border-purple-400 dark:border-purple-500 mx-5 md:mx-16"></div>
 
-      <div className="grid md:grid-cols-[1fr_380px] gap-10 md:gap-8 md:items-center xxl:items-start">
+      <div className="grid md:grid-cols-[1fr_380px] gap-10 md:gap-8 md:items-center 2xl:items-start">
         <div className="md:text-left space-y-[40px]">
           <h2 className="font-heading text-[30px] sm:text-[26px] lg:text-[40px] xl:text-[48px] leading-[1.6] md:leading-[1.4]">
             Why{' '}

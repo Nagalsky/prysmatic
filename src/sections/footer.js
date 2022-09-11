@@ -10,7 +10,7 @@ export default function Footer({...restProps}) {
       {...restProps}
     >
       <div className="px-4 lg:px-8 xl:px-16">
-        <div className="grid md:grid-cols-[200px_1fr] xxl:grid-cols-2 gap-9 xxl:gap-0">
+        <div className="grid md:grid-cols-[200px_1fr] 2xl:grid-cols-2 gap-9 2xl:gap-0">
           <div className="w-[200px] mx-auto lg:ml-0 flex flex-col items-center gap-9">
             <FooterLogo />
 
