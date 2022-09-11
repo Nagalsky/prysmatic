@@ -35,12 +35,6 @@ const AboutOurVision = forwardRef((props, ref) => {
           }, 3000)
         }
         slider.on('created', () => {
-          slider.container.addEventListener('mouseover', () => {
-            clearNextTimeout()
-          })
-          slider.container.addEventListener('mouseout', () => {
-            nextTimeout()
-          })
           nextTimeout()
         })
         slider.on('dragStarted', clearNextTimeout)
