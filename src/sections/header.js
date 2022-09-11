@@ -11,7 +11,7 @@ import {
   MobileMenuClose,
 } from '../lib/icons'
 import {HeaderLogo} from '../components/header-logo'
-import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock'
+import {lock, unlock} from 'tua-body-scroll-lock'
 
 export default function Header({...restProps}) {
   const router = useRouter()
@@ -24,12 +24,12 @@ export default function Header({...restProps}) {
 
   const openMobileMenu = () => {
     setIsOpened(!isOpened)
-    disableBodyScroll(scrollLockRef)
+    lock(scrollLockRef)
   }
 
   const closeMobileMenu = () => {
     setIsOpened(false)
-    enableBodyScroll(scrollLockRef)
+    unlock(scrollLockRef)
   }
 
   useEffect(() => {
