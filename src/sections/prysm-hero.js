@@ -1,14 +1,35 @@
+import {useEffect, useState, useCallback} from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowRight, GitHub } from '../lib/icons'
+import {ArrowRight, GitHub} from '../lib/icons'
 
-export default function PrysmHero({ ...restProps }) {
+export default function PrysmHero({...restProps}) {
+  const animatedLogos = [
+    '/images/animated-logo-1.svg',
+    '/images/animated-logo-2.svg',
+    '/images/animated-logo-3.svg',
+    '/images/animated-logo-4.svg',
+  ]
+
+  // const [activeLogo, setActiveLogo] = useState(0)
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveLogo(activeLogo + 1)
+  //     if (activeLogo === animatedLogos.length - 1) {
+  //       setActiveLogo(0)
+  //     }
+
+  //     console.log('activeLogo', activeLogo)
+  //   }, 1000)
+  //   return () => clearInterval(interval)
+  // }, [activeLogo, animatedLogos.length])
+
   return (
     <section
       className="pt-[20px] pb-[52px] sm:pt-[40px] md:pt-[60px] lg:pt-[120px] xl:pt-[200px] md:pb-[60px] lg:pb-[110px] relative text-center md:text-start"
       {...restProps}
     >
-      <div className="mb-[20px] md:m-0 md:absolute md:w-[48%] md:right-0 md:bottom-0 md:max-w-[710px]">
+      <div className="mb-[20px] md:m-0 md:absolute md:w-[48%] md:right-0 md:bottom-0 md:max-w-[710px] hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0">
         <Image
           src="/images/index-hero-banners.png"
           alt="hero-banners"
@@ -17,8 +38,18 @@ export default function PrysmHero({ ...restProps }) {
           quality={100}
           layout="responsive"
           priority={true}
-          className="hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0"
         />
+        <div className="absolute top-0 right-0">
+          <Image
+            src={animatedLogos[0]}
+            alt="hero-banners"
+            width={100}
+            height={100}
+            quality={100}
+            layout="responsive"
+            priority={true}
+          />
+        </div>
       </div>
 
       <div className="container relative z-10">
