@@ -97,7 +97,14 @@ export default function Footer({...restProps}) {
               </h3>
 
               <div className="grid gap-[10px] [&>*]:py-4 [&>*]:transition">
-                <Link href="/">
+                <Link
+                  href={{
+                    pathname: '/careers',
+                    query: {
+                      section: 'work-with-us',
+                    },
+                  }}
+                >
                   <a className="hover:text-white">Work With Us</a>
                 </Link>
               </div>

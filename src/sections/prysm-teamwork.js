@@ -63,13 +63,15 @@ export default function PrysmTeamWork({isNested, ...restProps}) {
               connected by a passion for a better and fairer world.
             </p>
 
-            <button
-              type="button"
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://discord.com/invite/prysmaticlabs"
               className="inline-flex items-center gap-1 rounded-[10px] text-semi-white dark:text-dark-500 transition py-[6px] px-[20px] bg-purple-500 hover:bg-purple-600 dark:bg-yellow-500 font-heading dark:hover:bg-yellow-600"
             >
               <Discord className="w-8 h-8" />
               Join Our Discord
-            </button>
+            </a>
           </div>
         </div>
       </div>

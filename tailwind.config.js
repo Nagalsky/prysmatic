@@ -40,6 +40,7 @@ module.exports = {
         'purple-400': '#AD8AFF',
         'purple-500': '#825AFF',
         'purple-600': '#6540da',
+        'yellow-400': '#efd475',
         'yellow-500': '#edc94a',
         'yellow-600': '#d2b343',
         'sky-500': '#75a8ff',

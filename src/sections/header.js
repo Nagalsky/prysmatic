@@ -129,7 +129,7 @@ export default function Header({...restProps}) {
               <a
                 className="text-dark-500 dark:text-white"
                 target="_blank"
-                href="https://github.com/"
+                href="https://docs.prylabs.network/docs/getting-started"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
               >

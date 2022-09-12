@@ -130,33 +130,6 @@ export default function PrysmOpenSource({...restProps}) {
           </div>
         </div>
 
-        {/* <div className="mb-[105px] w-[680px] mx-auto hidden md:block">
-          <Image
-            src="/images/open-source-banner.png"
-            alt="open-source-banner"
-            width={680}
-            height={560}
-            quality={100}
-            layout="responsive"
-            priority={true}
-            className="hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0"
-          />
-        </div>
-
-        <div className="mb-[60px] md:hidden">
-          <Image
-            src="/images/open-source-banner-mobile.png"
-            alt="open-source-banner-mobile"
-            height={100}
-            width={100}
-            quality={100}
-            layout="responsive"
-            objectFit="contain"
-            priority={true}
-            className="hue-rotate-180 invert dark:hue-rotate-0 dark:invert-0"
-          />
-        </div> */}
-
         <div className="grid md:grid-cols-[1fr_3px_1fr] gap-[40px] lg:gap-[80px]">
           <div className="flex flex-column items-center gap-[20px] justify-center flex-col">
             <div className="w-[90px] md:w-[150px]">

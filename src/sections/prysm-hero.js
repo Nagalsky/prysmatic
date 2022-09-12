@@ -42,7 +42,7 @@ export default function PrysmHero({...restProps}) {
 
             <a
               target="_blank"
-              href="https://github.com/"
+              href="https://docs.prylabs.network/docs/getting-started"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-4 transition font-heading text-purple-500 hover:text-purple-600 dark:text-yellow-500 dark:hover:text-yellow-600"
             >

@@ -6,7 +6,7 @@ import AboutOurVision from '../sections/about-our-vision'
 import AboutMeetTeam from '../sections/about-meet-team'
 import PrysmTeamWork from '../sections/prysm-teamwork'
 
-export default function Home() {
+export default function About() {
   const missionRef = useRef(null)
   const visionRef = useRef(null)
   const teamRef = useRef(null)
