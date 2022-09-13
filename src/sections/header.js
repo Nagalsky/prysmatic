@@ -86,7 +86,7 @@ export default function Header({...restProps}) {
               isOpened ? 'flex' : 'hidden'
             } grow flex-col items-start lg:flex lg:flex-row lg:items-center lg:justify-end absolute lg:static top-full bg-semi-white dark:bg-body-gradient lg:bg-transparent lg:dark:bg-none lg:dark:bg-transparent w-full lg:w-auto z-[50] left-0 p-[20px] lg:p-0 max-h-[calc(100vh_-_72px)] overflow-auto shadow-[0_4px_4px_0_rgba(0,0,0,0.05)_inset] dark:shadow-[0_4px_4px_0_rgba(0,0,0,0.25)_inset] lg:shadow-none dark:lg:shadow-none`}
           >
-            <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 xl:gap-8 2xl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center grow">
+            <nav className="flex flex-col lg:flex-row [&>*]:py-[12px] lg:[&>*]:py-0 gap-4 lg:gap-6 xl:gap-8 2xl:gap-[62px] w-full lg:w-auto [&>*]:transition [&>*]:flex lg:[&>*]:inline-flex [&>*]:justify-between [&>*]:items-center grow">
               <Link href="/">
                 <a
                   onClick={closeMobileMenu}
