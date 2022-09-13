@@ -74,8 +74,8 @@ const AboutOurMission = forwardRef((props, ref) => (
 
       <div className="my-8 md:my-16 border-t-[3px] border-dashed border-purple-400 dark:border-purple-500 mx-5 md:mx-16"></div>
 
-      <div className="grid md:grid-cols-[1fr_380px] gap-10 md:gap-8 md:items-center 2xl:items-start">
-        <div className="md:text-left space-y-[40px]">
+      <div className="grid lg:grid-cols-[1fr_380px] gap-10 md:gap-8 md:items-center 2xl:items-start">
+        <div className="lg:text-left space-y-[40px]">
           <h2 className="font-heading text-[30px] sm:text-[26px] lg:text-[40px] xl:text-[48px] leading-[1.6] md:leading-[1.4]">
             Why{' '}
             <span className="text-purple-500 dark:text-sky-500 uppercase font-heading-bold">
