@@ -94,7 +94,7 @@ export default function Header({...restProps}) {
                     router.pathname === '/'
                       ? 'text-purple-500 dark:text-rose-500 lg:border-b-dark-500 lg:dark:border-b-semi-white'
                       : 'lg:border-b-transparent'
-                  } text-dark-500 dark:text-white dark:hover:text-white lg:border-b`}
+                  } lg:text-dark-500 lg:dark:text-white lg:dark:hover:text-white lg:border-b`}
                 >
                   Prysm
                   <ArrowRight className="w-8 h-8 lg:hidden" />
@@ -107,7 +107,7 @@ export default function Header({...restProps}) {
                     router.pathname === '/about'
                       ? 'text-purple-500 dark:text-rose-500 lg:border-b-dark-500 lg:dark:border-b-semi-white'
                       : 'lg:border-b-transparent'
-                  } text-dark-500 dark:text-white dark:hover:text-white lg:border-b`}
+                  } lg:text-dark-500 lg:dark:text-white lg:dark:hover:text-white lg:border-b`}
                 >
                   About Us
                   <ArrowRight className="w-8 h-8 lg:hidden" />
@@ -120,7 +120,7 @@ export default function Header({...restProps}) {
                     router.pathname === '/careers'
                       ? 'text-purple-500 dark:text-rose-500 lg:border-b-dark-500 lg:dark:border-b-semi-white'
                       : 'lg:border-b-transparent'
-                  } text-dark-500 dark:text-white dark:hover:text-white lg:border-b`}
+                  } lg:text-dark-500 lg:dark:text-white lg:dark:hover:text-white lg:border-b`}
                 >
                   Careers
                   <ArrowRight className="w-8 h-8 lg:hidden" />
