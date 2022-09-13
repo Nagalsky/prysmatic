@@ -13,10 +13,10 @@ const galleryData = [
     name: 'Preston Van Loon',
     role: 'co-founder',
     about:
-      'Senior Go Engineer. Formerly Software Engineer at Google. JavaScript / Typescript, Node.js, Java, distributed systems design, and systems architecture. Formally trained tech interviewer from Amazon and Google.',
-    twitterUrl: 'https://twitter.com/',
-    gitHubUrl: 'https://github.com/',
-    avatarUrl: 'https://via.placeholder.com/150',
+      'Experienced in Golang, JavaScript / Typescript, Node.js, Java, distributed systems design, infrastructure, and systems architecture. Formerly Software Engineer at Google.',
+    twitterUrl: 'https://twitter.com/preston_vanloon',
+    gitHubUrl: 'https://github.com/prestonvanloon',
+    avatarUrl: '/images/team/preston.jpeg',
   },
   {
     id: 2,
@@ -24,9 +24,9 @@ const galleryData = [
     role: 'co-founder',
     about:
       'Senior Go Engineer, Systems Architecture, and Ethereum protocol development. Thiel Fellow, computer science at Harvard University.',
-    twitterUrl: 'https://twitter.com/',
-    gitHubUrl: 'https://github.com/',
-    avatarUrl: 'https://via.placeholder.com/150',
+    twitterUrl: 'https://twitter.com/rauljordaneth',
+    gitHubUrl: 'https://github.com/rauljordan',
+    avatarUrl: '/images/team/raul.png',
   },
   {
     id: 3,
@@ -34,9 +34,9 @@ const galleryData = [
     role: 'SENIOR GO ENGINEER',
     about:
       '#1 external contributor to Ethereum research specification. Software engineer at Riverbed and Cisco.',
-    twitterUrl: 'https://twitter.com/',
-    gitHubUrl: 'https://github.com/',
-    avatarUrl: 'https://via.placeholder.com/150',
+    twitterUrl: 'https://twitter.com/terencechain',
+    gitHubUrl: 'https://github.com/terencechain',
+    avatarUrl: '/images/team/terence1.png',
   },
   {
     id: 4,
@@ -44,49 +44,64 @@ const galleryData = [
     role: 'SENIOR GO ENGINEER',
     about:
       'P2P networking specialist. Best bug hunter in Ethereum core development Experience in quantitative finance.',
-    twitterUrl: 'https://twitter.com/',
-    gitHubUrl: 'https://github.com/',
-    avatarUrl: 'https://via.placeholder.com/150',
+    twitterUrl: 'https://twitter.com/n1shantd',
+    gitHubUrl: 'https://github.com/nisdas',
+    avatarUrl: '/images/team/nishant1.jpeg',
   },
   {
     id: 5,
-    name: 'Preston Van Loon',
-    role: 'co-founder',
+    name: 'Radosław Kapka',
+    role: 'Go Software Engineer',
     about:
-      'Senior Go Engineer. Formerly Software Engineer at Google. JavaScript / Typescript, Node.js, Java, distributed systems design, and systems architecture. Formally trained tech interviewer from Amazon and Google.',
-    twitterUrl: 'https://twitter.com/',
-    gitHubUrl: 'https://github.com/',
-    avatarUrl: 'https://via.placeholder.com/150',
+      'Experienced software engineer with a focus in full-stack web development and team lead working with .NET and Angular. Interested in software architecture.',
+    gitHubUrl: 'https://github.com/rkapka',
+    avatarUrl: '/images/team/radek.jpeg',
   },
   {
     id: 6,
-    name: 'Raul Jordan',
-    role: 'co-founder',
+    name: 'Clarin Dy',
+    role: 'Head of People Operations',
     about:
-      'Senior Go Engineer, Systems Architecture, and Ethereum protocol development. Thiel Fellow, computer science at Harvard University.',
-    twitterUrl: 'https://twitter.com/',
+      'People ops. Many years of experience in helping teams succeed operationally',
     gitHubUrl: 'https://github.com/',
-    avatarUrl: 'https://via.placeholder.com/150',
+    avatarUrl: '/images/team/Clarin.jpeg',
   },
   {
     id: 7,
-    name: 'Terence Tsao',
+    name: 'James He',
     role: 'SENIOR GO ENGINEER',
     about:
-      '#1 external contributor to Ethereum research specification. Software engineer at Riverbed and Cisco.',
-    twitterUrl: 'https://twitter.com/',
-    gitHubUrl: 'https://github.com/',
-    avatarUrl: 'https://via.placeholder.com/150',
+      'Previously from J.P.Morgan Chase & co. Full stack engineer with experience in UX and design',
+    twitterUrl: 'https://twitter.com/hesatprylabs',
+    gitHubUrl: 'https://github.com/james-prysm',
+    avatarUrl: '/images/team/james.png',
   },
   {
     id: 8,
-    name: 'Nishant Das',
+    name: 'Kasey Kirkham',
     role: 'SENIOR GO ENGINEER',
     about:
-      'P2P networking specialist. Best bug hunter in Ethereum core development Experience in quantitative finance.',
-    twitterUrl: 'https://twitter.com/',
-    gitHubUrl: 'https://github.com/',
-    avatarUrl: 'https://via.placeholder.com/150',
+      'Dedicated to building large scale data platforms and distributed systems at startups with interesting missions, including Niantic, Planet Labs, Voxy and Topsy.',
+    gitHubUrl: 'https://github.com/kasey',
+    avatarUrl: '/images/team/kasey.png',
+  },
+  {
+    id: 9,
+    name: 'Taranpreet Singh',
+    role: 'DevOps wizard',
+    about:
+      'Devops wizard, years of experience with cloud provisioning and infrastructure deployments',
+    gitHubUrl: 'https://github.com/Taranpreet26311',
+    avatarUrl: '/images/team/Taran.jpeg',
+  },
+  {
+    id: 10,
+    name: 'Mick B',
+    role: 'Technical Content Lead',
+    about:
+      "Computer systems engineer by education, software developer and technical writer by profession. Excited to accelerate the world's transition to sustainable economics.",
+    twitterUrl: 'https://twitter.com/symbolpunk',
+    avatarUrl: '/images/team/mick.png',
   },
 ]
 
@@ -177,12 +192,13 @@ const AboutMeetTeam = forwardRef((props, ref) => {
               >
                 <div className="mb-5">
                   <Image
-                    src="/images/team-gallery-avatar.png"
-                    alt="avatar"
+                    src={item.avatarUrl}
+                    alt={item.name}
                     width={150}
                     height={150}
                     quality={100}
                     priority={true}
+                    className="rounded-full"
                   />
                 </div>
 
@@ -208,7 +224,13 @@ const AboutMeetTeam = forwardRef((props, ref) => {
                 </div>
 
                 <h4 className="text-[26px] md:text-[30px] font-heading mb-4 leading-[1.3]">
-                  {item.name}
+                  <a
+                    target="_blank"
+                    href={item.gitHubUrl}
+                    rel="noopener noreferrer"
+                  >
+                    {item.name}
+                  </a>
                 </h4>
                 <p className="text-[18px] md:text-[25px] font-subheading mb-4 leading-[1.3] uppercase tracking-[0.75px]">
                   {item.role}
@@ -229,6 +251,7 @@ const AboutMeetTeam = forwardRef((props, ref) => {
                 onClick={(e) =>
                   e.stopPropagation() || instanceMeetTeamRef.current?.prev()
                 }
+                disabled={currentSlide === 0}
               />
 
               <GalleryControls
@@ -237,6 +260,10 @@ const AboutMeetTeam = forwardRef((props, ref) => {
                 right
                 onClick={(e) =>
                   e.stopPropagation() || instanceMeetTeamRef.current?.next()
+                }
+                disabled={
+                  currentSlide ===
+                  instanceMeetTeamRef.current.track.details.slides.length - 1
                 }
               />
             </div>

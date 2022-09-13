@@ -12,11 +12,9 @@ const slides = [
   '/images/sponsors-slide-3.png',
   '/images/sponsors-slide-4.png',
   '/images/sponsors-slide-5.png',
-  '/images/sponsors-slide-1.png',
-  '/images/sponsors-slide-2.png',
-  '/images/sponsors-slide-3.png',
-  '/images/sponsors-slide-4.png',
-  '/images/sponsors-slide-5.png',
+  '/images/sponsors-slide-6.png',
+  '/images/sponsors-slide-7.png',
+  '/images/sponsors-slide-8.png',
 ]
 
 export default function PrysmSponsors({...restProps}) {

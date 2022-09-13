@@ -92,7 +92,7 @@ export default function Header({...restProps}) {
                   onClick={closeMobileMenu}
                   className={`${
                     router.pathname === '/'
-                      ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
+                      ? 'text-purple-500 dark:text-rose-500 lg:border-b-dark-500 lg:dark:border-b-semi-white'
                       : 'lg:border-b-transparent'
                   } text-dark-500 dark:text-white dark:hover:text-white lg:border-b`}
                 >
@@ -105,7 +105,7 @@ export default function Header({...restProps}) {
                   onClick={closeMobileMenu}
                   className={`${
                     router.pathname === '/about'
-                      ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
+                      ? 'text-purple-500 dark:text-rose-500 lg:border-b-dark-500 lg:dark:border-b-semi-white'
                       : 'lg:border-b-transparent'
                   } text-dark-500 dark:text-white dark:hover:text-white lg:border-b`}
                 >
@@ -118,7 +118,7 @@ export default function Header({...restProps}) {
                   onClick={closeMobileMenu}
                   className={`${
                     router.pathname === '/careers'
-                      ? 'lg:border-b-dark-500 lg:dark:border-b-semi-white'
+                      ? 'text-purple-500 dark:text-rose-500 lg:border-b-dark-500 lg:dark:border-b-semi-white'
                       : 'lg:border-b-transparent'
                   } text-dark-500 dark:text-white dark:hover:text-white lg:border-b`}
                 >
